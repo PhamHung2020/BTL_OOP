@@ -1,0 +1,10 @@
+C:\Test\BTL_OOP\BTL_OOP\BTL_OOP\bin\Debug\BTL_OOP.exe.config
+C:\Test\BTL_OOP\BTL_OOP\BTL_OOP\bin\Debug\BTL_OOP.exe
+C:\Test\BTL_OOP\BTL_OOP\BTL_OOP\bin\Debug\BTL_OOP.pdb
+C:\Test\BTL_OOP\BTL_OOP\BTL_OOP\obj\Debug\BTL_OOP.csprojAssemblyReference.cache
+C:\Test\BTL_OOP\BTL_OOP\BTL_OOP\obj\Debug\BTL_OOP.Form1.resources
+C:\Test\BTL_OOP\BTL_OOP\BTL_OOP\obj\Debug\BTL_OOP.Properties.Resources.resources
+C:\Test\BTL_OOP\BTL_OOP\BTL_OOP\obj\Debug\BTL_OOP.csproj.GenerateResource.cache
+C:\Test\BTL_OOP\BTL_OOP\BTL_OOP\obj\Debug\BTL_OOP.csproj.CoreCompileInputs.cache
+C:\Test\BTL_OOP\BTL_OOP\BTL_OOP\obj\Debug\BTL_OOP.exe
+C:\Test\BTL_OOP\BTL_OOP\BTL_OOP\obj\Debug\BTL_OOP.pdb
