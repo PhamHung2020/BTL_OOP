@@ -1,0 +1,14 @@
+C:\Users\nangb\Desktop\OOP\OPP\OPP\bin\Debug\OPP.exe.config
+C:\Users\nangb\Desktop\OOP\OPP\OPP\bin\Debug\OPP.exe
+C:\Users\nangb\Desktop\OOP\OPP\OPP\bin\Debug\OPP.pdb
+C:\Users\nangb\Desktop\OOP\OPP\OPP\obj\Debug\OPP.csprojAssemblyReference.cache
+C:\Users\nangb\Desktop\OOP\OPP\OPP\obj\Debug\OPP.Form1.resources
+C:\Users\nangb\Desktop\OOP\OPP\OPP\obj\Debug\OPP.Properties.Resources.resources
+C:\Users\nangb\Desktop\OOP\OPP\OPP\obj\Debug\OPP.csproj.GenerateResource.cache
+C:\Users\nangb\Desktop\OOP\OPP\OPP\obj\Debug\OPP.csproj.CoreCompileInputs.cache
+C:\Users\nangb\Desktop\OOP\OPP\OPP\obj\Debug\OPP.exe
+C:\Users\nangb\Desktop\OOP\OPP\OPP\obj\Debug\OPP.pdb
+C:\Users\nangb\Desktop\OOP\OPP\OPP\obj\Debug\OPP.frmStatistical.resources
+C:\Users\nangb\Desktop\OOP\OPP\OPP\obj\Debug\OPP.frmLogin.resources
+C:\Users\nangb\Desktop\OOP\OPP\OPP\bin\Debug\Database1.mdf
+C:\Users\nangb\Desktop\OOP\OPP\OPP\bin\Debug\Database1_log.ldf
