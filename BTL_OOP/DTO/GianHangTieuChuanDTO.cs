@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class GianHangTieuChuan : GianHangDTO
+    public class GianHangTieuChuanDTO : GianHangDTO
     {
+        public GianHangTieuChuanDTO(string _maGianHang, double _dienTich, string _viTriGianHang, bool _tinhTrangThue) : base(_maGianHang, _dienTich, _viTriGianHang, _tinhTrangThue) { }
+
         private string _chatLieuVachNgan = "Unknown";
         public string ChatLieuVachNgan
         {

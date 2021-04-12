@@ -43,7 +43,7 @@
   <ItemGroup>
     <Compile Include="GianHangCaoCapDTO.cs" />
     <Compile Include="GianHangDTO.cs" />
-    <Compile Include="GianHangTieuChuan.cs" />
+    <Compile Include="GianHangTieuChuanDTO.cs" />
     <Compile Include="KhachHangDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
