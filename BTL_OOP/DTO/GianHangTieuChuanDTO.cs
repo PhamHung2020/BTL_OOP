@@ -22,5 +22,9 @@ namespace DTO
             get => _chatLieuMaiChe;
             set { if (value != null) _chatLieuMaiChe = value; }
         }
+        public override decimal TinhChiPhi(int soNgayThue)
+        {
+            return (decimal)(100000 * DienTich * soNgayThue);
+        }
     }
 }

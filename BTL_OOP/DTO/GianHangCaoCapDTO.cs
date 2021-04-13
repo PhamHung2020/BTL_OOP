@@ -22,6 +22,9 @@ namespace DTO
             get => _soBanGhe;
             set { if (value >= 0) _soBanGhe = value; }
         }
+        public override decimal TinhChiPhi(int soNgayThue)
+        {
+            return (decimal)(120000 * DienTich * soNgayThue);
+        }
     }
-    
 }
