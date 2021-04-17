@@ -40,7 +40,7 @@ namespace DTO
         public DateTime ThoiGianKetThucThue
         {
             get => _thoiGianKetThucThue;
-            set { if (value.Year >= 2010) _thoiGianKetThucThue = value; }
+            set { if (value.Year >= 2010 && value > _thoiGianBatDauThue) _thoiGianKetThucThue = value; }
         }
 
         private decimal _tienDatCoc;

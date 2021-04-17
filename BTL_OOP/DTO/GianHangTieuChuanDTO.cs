@@ -26,5 +26,11 @@ namespace DTO
         {
             return (decimal)(100000 * DienTich * soNgayThue);
         }
+
+        public GianHangTieuChuanDTO(string _maGianHang, double _dienTich, string _viTriGianHang, bool _tinhTrangThue, string _chatLieuMaiChe, string _chatLieuVachNgan) : this(_maGianHang, _dienTich, _viTriGianHang, _tinhTrangThue)
+        {
+            this._chatLieuMaiChe = _chatLieuMaiChe;
+            this._chatLieuVachNgan = _chatLieuVachNgan;
+        }
     }
 }

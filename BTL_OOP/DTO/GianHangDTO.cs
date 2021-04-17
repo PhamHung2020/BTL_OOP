@@ -43,7 +43,6 @@ namespace DTO
             this._tinhTrangThue = _tinhTrangThue;
         }
         public abstract decimal TinhChiPhi(int soNgayThue);
-        
     }
 }
 
