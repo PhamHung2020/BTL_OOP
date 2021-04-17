@@ -8,7 +8,16 @@ namespace DTO
 {
     public class GianHangCaoCapDTO : GianHangDTO
     {
-        public GianHangCaoCapDTO(string _maGianHang, double _dienTich, string _viTriGianHang, bool _tinhTrangThue) : base(_maGianHang, _dienTich, _viTriGianHang, _tinhTrangThue) { }
+        public GianHangCaoCapDTO(string _maGianHang,
+                                 double _dienTich,
+                                 string _viTriGianHang,
+                                 bool _tinhTrangThue,
+                                 int _soQuatLamMat = 0,
+                                 int _soBanGhe = 0) : base(_maGianHang, _dienTich, _viTriGianHang, _tinhTrangThue) 
+        {
+            this._soQuatLamMat = _soQuatLamMat;
+            this._soBanGhe = _soBanGhe;
+        }
 
         private int _soQuatLamMat = 0;
         public int SoQuatLamMat
@@ -25,11 +34,6 @@ namespace DTO
         public override decimal TinhChiPhi(int soNgayThue)
         {
             return (decimal)(120000 * DienTich * soNgayThue + _soQuatLamMat * 50000);
-        }
-        public GianHangCaoCapDTO(string _maGianHang, double _dienTich, string _viTriGianHang, bool _tinhTrangThue, int _soQuatLamMat, int _soBanGhe) : this (_maGianHang, _dienTich, _viTriGianHang, _tinhTrangThue)
-        {
-            this._soQuatLamMat = _soQuatLamMat;
-            this._soBanGhe = _soBanGhe;
         }
     }
 }
