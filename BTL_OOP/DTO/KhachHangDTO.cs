@@ -49,6 +49,19 @@ namespace DTO
             get => _tienDatCoc;
             set { if (value >= 0) _tienDatCoc = value; }
         }
-
+        public KhachHangDTO(string _ten,
+                            string _diaChi,
+                            string _maGianHang,
+                            DateTime _thoiGianBatDauThue,
+                            DateTime _thoiGianKetThucThue,
+                            decimal _tienDatCoc)
+        {
+            this._ten = _ten;
+            this._diaChi = _diaChi;
+            this._maGianHang = _maGianHang;
+            this._thoiGianBatDauThue = _thoiGianBatDauThue;
+            this._thoiGianKetThucThue = _thoiGianKetThucThue;
+            this._tienDatCoc = _tienDatCoc;
+        }
     }
 }
