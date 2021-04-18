@@ -1,2 +1,4 @@
 *.suo
 *.cache
+*.mdf
+*.ldf
