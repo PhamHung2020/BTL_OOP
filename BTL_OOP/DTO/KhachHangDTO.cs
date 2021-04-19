@@ -8,6 +8,13 @@ namespace DTO
 {
     public class KhachHangDTO
     {
+        private string _maKhachHang;
+        public string MaKhachHang
+        {
+            get => _maKhachHang;
+            set { if (value != null) _maKhachHang = value; }
+        }
+
         private string _ten = "Unknown";
         public string Ten
         {
@@ -49,13 +56,15 @@ namespace DTO
             get => _tienDatCoc;
             set { if (value >= 0) _tienDatCoc = value; }
         }
-        public KhachHangDTO(string _ten,
+        public KhachHangDTO(string _maKhachHang,
+                            string _ten,
                             string _diaChi,
                             string _maGianHang,
                             DateTime _thoiGianBatDauThue,
                             DateTime _thoiGianKetThucThue,
                             decimal _tienDatCoc)
         {
+            this._maKhachHang = _maKhachHang;
             this._ten = _ten;
             this._diaChi = _diaChi;
             this._maGianHang = _maGianHang;
@@ -63,5 +72,6 @@ namespace DTO
             this._thoiGianKetThucThue = _thoiGianKetThucThue;
             this._tienDatCoc = _tienDatCoc;
         }
+
     }
 }
