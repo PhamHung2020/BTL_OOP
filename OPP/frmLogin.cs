@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Data.SqlClient;
 
 namespace OPP
 {
@@ -66,15 +67,20 @@ namespace OPP
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form1 form1 = new Form1();
-            if(txtUserName.Text == "nh3" && txtPass.Text == "nh3" && form1.ShowDialog() != DialogResult.OK)
+            TaiKhoanKhachHangBUS taiKhoanKhachHangBUS = TaiKhoanKhachHangBUS.getInstance();
+            if(taiKhoanKhachHangBUS.Check(txtUserName.Text, txtPass.Text))
             {
-                Application.Exit();
-            }else
+                this.Hide();
+                Form1 form1 = new Form1();
+                form1.Show();
+                    
+            }
+            else
             {
+                MessageBox.Show("Check your username and password", "Thông báo", MessageBoxButtons.OK);
                 this.Show();
             }    
+
 
         }
 

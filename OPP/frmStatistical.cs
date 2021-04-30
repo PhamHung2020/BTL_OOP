@@ -12,9 +12,15 @@ namespace OPP
 {
     public partial class frmStatistical : Form
     {
+        public List<>
         public frmStatistical()
         {
             InitializeComponent();
+        }
+
+        private void frmStatistical_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -229,5 +229,15 @@ namespace OPP.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap zsteve1_wuhk {
+            get {
+                object obj = ResourceManager.GetObject("zsteve1_wuhk", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
