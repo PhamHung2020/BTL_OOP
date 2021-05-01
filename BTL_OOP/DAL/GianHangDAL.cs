@@ -23,7 +23,7 @@ namespace DAL
         {
             _dsGianHang = new List<GianHangDTO>()
             {
-                new GianHangCaoCapDTO("CC101", 5.6, "101", false, 5, 6),
+                new GianHangCaoCapDTO("CC102", 5.6, "102", false, 5, 6),
                 new GianHangCaoCapDTO("CC203", 10.25, "202", false, 10, 12),
                 new GianHangTieuChuanDTO("TC101", 5.6, "101", true, "Ton", "Nhua"),
                 new GianHangTieuChuanDTO("TC202", 10.25, "202", false, "Sat", "Dong")

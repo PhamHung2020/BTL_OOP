@@ -26,6 +26,8 @@ namespace BUS
 
         public static void InTT<T>(T gianHang) where T : GianHangDTO
         {
+            if (gianHang == null)
+                return;
             Console.WriteLine($"Ma gian hang {gianHang.MaGianHang}");
             Console.WriteLine($"Dien tich : {gianHang.DienTich}");
             Console.WriteLine($"Vi tri : {gianHang.ViTriGianHang}");
@@ -42,6 +44,18 @@ namespace BUS
                 Console.WriteLine($"So luong quat lam mat : {newGianHang.SoQuatLamMat}");
                 Console.WriteLine($"So luong ban ghe : {newGianHang.SoBanGhe}");
             }
+        }
+
+        public static void InTT(KhachHangDTO khachHang)
+        {
+            if (khachHang == null)
+                return;
+            Console.WriteLine($"Ma khach hang : {khachHang.MaKhachHang}");
+            Console.WriteLine($"Ten : {khachHang.Ten}");
+            Console.WriteLine($"Dia chi : {khachHang.DiaChi}");
+            Console.WriteLine($"Thoi gian bat dau thue : {khachHang.ThoiGianBatDauThue.ToShortDateString()}");
+            Console.WriteLine($"Thoi gian ket thuc thue : {khachHang.ThoiGianKetThucThue.ToShortDateString()}");
+            Console.WriteLine($"Tien dat coc : {khachHang.TienDatCoc}");
         }
     }
 }

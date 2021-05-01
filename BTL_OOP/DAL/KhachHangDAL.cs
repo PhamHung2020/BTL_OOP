@@ -24,7 +24,7 @@ namespace DAL
         {
             _dsKhachHang = new List<KhachHangDTO>()
             {
-                new KhachHangDTO("00001", "Pham Hung", "Lang Son", "TC101", new DateTime(2021, 3, 15), new DateTime(2021, 4, 16), 10000000),
+                new KhachHangDTO("00001", "Pham Hung", "Lang Son", "TC101", new DateTime(2021, 3, 15), new DateTime(2021, 3, 15), 10000000),
             };
         }
     }

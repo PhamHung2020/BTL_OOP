@@ -1,0 +1,14 @@
+C:\Users\ACER\Desktop\BTL_OOP\BTL_OOP\Test\bin\Debug\Test.exe.config
+C:\Users\ACER\Desktop\BTL_OOP\BTL_OOP\Test\bin\Debug\Test.exe
+C:\Users\ACER\Desktop\BTL_OOP\BTL_OOP\Test\bin\Debug\Test.pdb
+C:\Users\ACER\Desktop\BTL_OOP\BTL_OOP\Test\bin\Debug\BUS.dll
+C:\Users\ACER\Desktop\BTL_OOP\BTL_OOP\Test\bin\Debug\DAL.dll
+C:\Users\ACER\Desktop\BTL_OOP\BTL_OOP\Test\bin\Debug\DTO.dll
+C:\Users\ACER\Desktop\BTL_OOP\BTL_OOP\Test\bin\Debug\BUS.pdb
+C:\Users\ACER\Desktop\BTL_OOP\BTL_OOP\Test\bin\Debug\DAL.pdb
+C:\Users\ACER\Desktop\BTL_OOP\BTL_OOP\Test\bin\Debug\DTO.pdb
+C:\Users\ACER\Desktop\BTL_OOP\BTL_OOP\Test\obj\Debug\Test.csprojAssemblyReference.cache
+C:\Users\ACER\Desktop\BTL_OOP\BTL_OOP\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+C:\Users\ACER\Desktop\BTL_OOP\BTL_OOP\Test\obj\Debug\Test.csproj.CopyComplete
+C:\Users\ACER\Desktop\BTL_OOP\BTL_OOP\Test\obj\Debug\Test.exe
+C:\Users\ACER\Desktop\BTL_OOP\BTL_OOP\Test\obj\Debug\Test.pdb

@@ -79,7 +79,8 @@ namespace BUS
             {
                 throw new Exception("Khách hàng không tồn tại");
             }
-            khachHang = khachHangCapNhat;
+            int index = _context.DsKhachHang.IndexOf(khachHang);
+            _context.DsKhachHang[index] = khachHangCapNhat;
             return true;
         }
     }

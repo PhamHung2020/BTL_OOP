@@ -59,7 +59,7 @@ namespace BUS
                 {
                     time = thoiGianKetThuc - khachHang.ThoiGianBatDauThue;
                 }
-                doanhThu += GianHangBUS.Instance.TimKiemTheoMaGianHang(khachHang.MaGianHang).TinhChiPhi((int)time.TotalDays);
+                doanhThu += GianHangBUS.Instance.TimKiemTheoMaGianHang(khachHang.MaGianHang).TinhChiPhi((int)time.TotalDays + 1);
             }
             return doanhThu;
         }

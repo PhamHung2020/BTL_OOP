@@ -68,7 +68,8 @@ namespace BUS
             {
                 throw new Exception("Gian hàng đang được thuê. Cập nhật không thành công");
             }
-            gianHang = gianHangCapNhat;
+            int index = _context.DsGianHang.IndexOf(gianHang);
+            _context.DsGianHang[index] = gianHangCapNhat;
             return true;
         }
 
