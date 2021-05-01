@@ -1,0 +1,5 @@
+C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\DTO\bin\Debug\DTO.dll
+C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\DTO\bin\Debug\DTO.pdb
+C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\DTO\obj\Debug\DTO.dll
+C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\DTO\obj\Debug\DTO.pdb

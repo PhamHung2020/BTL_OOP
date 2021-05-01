@@ -79,5 +79,15 @@ namespace OPP
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        private void btnDetail_Click(object sender, EventArgs e)
+        {
+            addFrm(new frmThueGianHang());
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
