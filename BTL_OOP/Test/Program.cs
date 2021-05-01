@@ -27,12 +27,17 @@ namespace Test
 
             //GianHangBUS.Instance.ThayDoiTinhTrangThue("TC101", true);
 
-            //var list = GianHangBUS.Instance.DanhSachGianHangTheoTinhTrangThue(true);
-            //foreach (var newgianHang in list)
-            //{
-            //    HelperBUS.InTT<GianHangDTO>(newgianHang);
-            //    Console.WriteLine();
-            //}
+            var list = GianHangBUS.Instance.DanhSachGianHangTheoTinhTrangThue(true);
+            foreach (var newgianHang in list)
+            {
+                HelperBUS.InTT<GianHangDTO>(newgianHang);
+                Console.WriteLine();
+            }
+
+            KhuTrungBayBUS.Instance.KiemTraTinhTrangThue();
+
+            var gianHang2 = GianHangBUS.Instance.TimKiemTheoMaGianHang("TC101");
+            HelperBUS.InTT<GianHangDTO>(gianHang2);
 
             //var list = KhachHangBUS.Instance.TimKiemTheoMaGianHang("TC101");
             //foreach (var khachHang in list)
@@ -44,7 +49,7 @@ namespace Test
             //var khachHang = KhachHangBUS.Instance.TimKiemTheoMaKhachHang("00002");
             //HelperBUS.InTT(khachHang);
 
-            Console.WriteLine(KhuTrungBayBUS.Instance.DoanhThu(new DateTime(2021, 3, 1), new DateTime(2021, 3, 31)));
+            //Console.WriteLine(KhuTrungBayBUS.Instance.DoanhThu(new DateTime(2021, 3, 1), new DateTime(2021, 3, 10)));
             Console.ReadKey();
         }
     }

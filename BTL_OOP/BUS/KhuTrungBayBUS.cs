@@ -46,16 +46,21 @@ namespace BUS
             var dsKhachHang = KhachHangBUS.Instance.LayDanhSachKhachHang();
             foreach (var khachHang in dsKhachHang)
             {
-                var time = new TimeSpan(0, 0, 0, 0);
-                if (thoiGianBatDau <= khachHang.ThoiGianBatDauThue && khachHang.ThoiGianKetThucThue <= thoiGianKetThuc)
+                var time = new TimeSpan(-1, 0, 0, 0);
+                if (thoiGianBatDau.Date <= khachHang.ThoiGianBatDauThue.Date && 
+                    khachHang.ThoiGianKetThucThue.Date <= thoiGianKetThuc.Date)
                 {
                     time = khachHang.ThoiGianKetThucThue - khachHang.ThoiGianBatDauThue;
                 }
-                else if (khachHang.ThoiGianBatDauThue < thoiGianBatDau && khachHang.ThoiGianKetThucThue < thoiGianKetThuc)
+                else if (khachHang.ThoiGianBatDauThue.Date < thoiGianBatDau.Date && 
+                         khachHang.ThoiGianKetThucThue.Date < thoiGianKetThuc.Date &&
+                         thoiGianBatDau.Date <= khachHang.ThoiGianKetThucThue.Date)
                 {
                     time = khachHang.ThoiGianKetThucThue - thoiGianBatDau;
                 }
-                else if (thoiGianBatDau < khachHang.ThoiGianBatDauThue && thoiGianKetThuc < khachHang.ThoiGianKetThucThue)
+                else if (thoiGianBatDau.Date < khachHang.ThoiGianBatDauThue.Date && 
+                         thoiGianKetThuc.Date < khachHang.ThoiGianKetThucThue.Date &&
+                         khachHang.ThoiGianBatDauThue.Date <= thoiGianKetThuc.Date)
                 {
                     time = thoiGianKetThuc - khachHang.ThoiGianBatDauThue;
                 }
@@ -81,6 +86,26 @@ namespace BUS
                 result.RemoveAt(gianHang.MaGianHang[4] - '0' - 1);
             }
             return result;
+        }
+
+        public void KiemTraTinhTrangThue()
+        {
+            List<GianHangDTO> dsGianHangThue = GianHangBUS.Instance.DanhSachGianHangTheoTinhTrangThue(true);
+            Dictionary<string, GianHangDTO> dsThue = new Dictionary<string, GianHangDTO>();
+            foreach (GianHangDTO gianHang in dsGianHangThue)
+            {
+                dsThue.Add(gianHang.MaGianHang, gianHang);
+            }
+
+            List<KhachHangDTO> dsKhachHang = KhachHangBUS.Instance.LayDanhSachKhachHang();
+            foreach (KhachHangDTO khachHang in dsKhachHang)
+            {
+                if (dsThue[khachHang.MaGianHang].TinhTrangThue &&
+                    khachHang.ThoiGianKetThucThue.Date < DateTime.Now.Date)
+                {
+                    dsThue[khachHang.MaGianHang].TinhTrangThue = false;
+                }
+            }
         }
     }
 }

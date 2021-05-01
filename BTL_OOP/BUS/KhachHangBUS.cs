@@ -36,8 +36,8 @@ namespace BUS
         public List<KhachHangDTO> TimKiemTheoMaGianHang(string maGianHang, DateTime time)
         {
             return _context.DsKhachHang.Where(khachHang => khachHang.MaGianHang == maGianHang &&
-                                              khachHang.ThoiGianBatDauThue <= time &&
-                                              time <= khachHang.ThoiGianKetThucThue).ToList();
+                                              khachHang.ThoiGianBatDauThue.Date <= time.Date &&
+                                              time.Date <= khachHang.ThoiGianKetThucThue.Date).ToList();
         }
 
 
@@ -53,17 +53,17 @@ namespace BUS
 
         public bool ThemKhachHang(KhachHangDTO khachHangMoi)
         {
-            if (khachHangMoi.ThoiGianBatDauThue < DateTime.Now)
+            if (khachHangMoi.ThoiGianBatDauThue.Date < DateTime.Now.Date)
             {
                 throw new Exception($"Thời điểm thuê không hợp lệ");
             }
             foreach (var khachHang in _context.DsKhachHang)
             {
                 if (khachHangMoi.MaGianHang == khachHang.MaGianHang &&
-                   (khachHang.ThoiGianBatDauThue <= khachHangMoi.ThoiGianBatDauThue &&
-                    khachHang.ThoiGianKetThucThue >= khachHangMoi.ThoiGianKetThucThue) ||
-                   (khachHang.ThoiGianBatDauThue <= khachHangMoi.ThoiGianKetThucThue &&
-                    khachHang.ThoiGianKetThucThue >= khachHangMoi.ThoiGianKetThucThue))
+                   (khachHang.ThoiGianBatDauThue.Date <= khachHangMoi.ThoiGianKetThucThue.Date &&
+                    khachHang.ThoiGianKetThucThue.Date >= khachHangMoi.ThoiGianKetThucThue.Date) ||
+                   (khachHang.ThoiGianBatDauThue.Date <= khachHangMoi.ThoiGianBatDauThue.Date &&
+                    khachHang.ThoiGianKetThucThue.Date >= khachHangMoi.ThoiGianBatDauThue.Date))
                 {
                     throw new Exception($"Gian hàng {khachHangMoi.MaGianHang} đang được thuê bởi khách hàng {khachHang.MaKhachHang} từ {khachHang.ThoiGianBatDauThue.ToString()} đến {khachHang.ThoiGianKetThucThue.ToString()}");
                 }
