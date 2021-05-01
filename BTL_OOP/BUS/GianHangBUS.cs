@@ -44,7 +44,7 @@ namespace BUS
             return _context.LayDanhSachGianHang<T>();
         }
 
-        public bool ThemGianHang(GianHangTieuChuanDTO gianHangMoi)
+        public bool ThemGianHang(GianHangDTO gianHangMoi)
         {
             foreach (var gianHang in _context.DsGianHang)
             {
