@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    class TaiKhoanDTO
+    public class TaiKhoanDTO
     {
         private string _email;
         public string Email
