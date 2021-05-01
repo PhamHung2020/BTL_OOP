@@ -53,10 +53,10 @@ namespace BUS
 
         public bool ThemKhachHang(KhachHangDTO khachHangMoi)
         {
-            if (khachHangMoi.ThoiGianBatDauThue.Date < DateTime.Now.Date)
-            {
-                throw new Exception($"Thời điểm thuê không hợp lệ");
-            }
+            //if (khachHangMoi.ThoiGianBatDauThue.Date < DateTime.Now.Date)
+            //{
+            //    throw new Exception($"Thời điểm thuê không hợp lệ");
+            //}
             foreach (var khachHang in _context.DsKhachHang)
             {
                 if (khachHangMoi.MaGianHang == khachHang.MaGianHang &&

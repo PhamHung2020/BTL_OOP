@@ -31,7 +31,9 @@ namespace BUS
         {
             try
             {
-                GianHangBUS.Instance.ThayDoiTinhTrangThue(khachHangMoi.MaGianHang, true);
+                if (khachHangMoi.ThoiGianBatDauThue.Date <= DateTime.Now.Date &&
+                    DateTime.Now.Date <= khachHangMoi.ThoiGianKetThucThue.Date)
+                    GianHangBUS.Instance.ThayDoiTinhTrangThue(khachHangMoi.MaGianHang, true);
                 KhachHangBUS.Instance.ThemKhachHang(khachHangMoi);
             }
             catch (Exception ex)
@@ -90,7 +92,7 @@ namespace BUS
 
         public void KiemTraTinhTrangThue()
         {
-            List<GianHangDTO> dsGianHangThue = GianHangBUS.Instance.DanhSachGianHangTheoTinhTrangThue(true);
+            List<GianHangDTO> dsGianHangThue = GianHangBUS.Instance.LayDanhSachGianHang<GianHangDTO>();
             Dictionary<string, GianHangDTO> dsThue = new Dictionary<string, GianHangDTO>();
             foreach (GianHangDTO gianHang in dsGianHangThue)
             {
@@ -102,6 +104,11 @@ namespace BUS
             {
                 if (dsThue[khachHang.MaGianHang].TinhTrangThue &&
                     khachHang.ThoiGianKetThucThue.Date < DateTime.Now.Date)
+                {
+                    dsThue[khachHang.MaGianHang].TinhTrangThue = false;
+                }
+                else if (!dsThue[khachHang.MaGianHang].TinhTrangThue &&
+                         khachHang.ThoiGianBatDauThue.Date <= DateTime.Now.Date)
                 {
                     dsThue[khachHang.MaGianHang].TinhTrangThue = false;
                 }
