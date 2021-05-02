@@ -29,14 +29,14 @@ namespace BUS
 
         private GianHangDAL _context;
 
-        public GianHangDTO TimKiemTheoMaGianHang(string maGianHang)
+        public List<GianHangDTO> TimKiemTheoMaGianHang(string maGianHang)
         {
-            return _context.DsGianHang.FirstOrDefault(gianHang => gianHang.MaGianHang == maGianHang);
+            return _context.DsGianHang.Where(gianHang => gianHang.MaGianHang.Contains(maGianHang)).ToList();
         }
 
-        public T TimKiemTheoMaGianHang<T>(string maGianHang) where T : GianHangDTO
+        public List<T> TimKiemTheoMaGianHang<T>(string maGianHang) where T : GianHangDTO
         {
-            return _context.DsGianHang.FirstOrDefault(gianHang => gianHang.MaGianHang == maGianHang && gianHang is T) as T;
+            return _context.DsGianHang.Where(gianHang => gianHang.MaGianHang.Contains(maGianHang) && gianHang is T) as List<T>;
         }
 
         public List<T> LayDanhSachGianHang<T>() where T : GianHangDTO
@@ -59,7 +59,7 @@ namespace BUS
 
         public bool CapNhatGianHang(GianHangDTO gianHangCapNhat)
         {
-            var gianHang = TimKiemTheoMaGianHang<GianHangDTO>(gianHangCapNhat.MaGianHang);
+            var gianHang = TimKiemTheoMaGianHang<GianHangDTO>(gianHangCapNhat.MaGianHang)[0];
             if (gianHang == null)
             {
                 throw new Exception("Gian hàng không tồn tại");
@@ -75,7 +75,7 @@ namespace BUS
 
         public bool XoaGianHang(string maGianHang)
         {
-            var gianHang = TimKiemTheoMaGianHang(maGianHang);
+            var gianHang = TimKiemTheoMaGianHang(maGianHang)[0];
             if (gianHang == null)
             {
                 throw new Exception("Gian hàng không tồn tại");
@@ -110,7 +110,7 @@ namespace BUS
 
         public void ThayDoiTinhTrangThue(string maGianHang, bool tinhTrangThue)
         {
-            GianHangDTO gianHang = TimKiemTheoMaGianHang(maGianHang);
+            GianHangDTO gianHang = TimKiemTheoMaGianHang(maGianHang)[0];
             if (gianHang == null)
             {
                 throw new Exception("Gian hàng không tồn tại");
