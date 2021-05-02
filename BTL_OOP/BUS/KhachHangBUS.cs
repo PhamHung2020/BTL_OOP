@@ -33,11 +33,11 @@ namespace BUS
             return _context.DsKhachHang.Where(khachHang => khachHang.MaGianHang == maGianHang).ToList();
         }
 
-        public List<KhachHangDTO> TimKiemTheoMaGianHang(string maGianHang, DateTime time)
+        public KhachHangDTO TimKiemTheoMaGianHang(string maGianHang, DateTime time)
         {
-            return _context.DsKhachHang.Where(khachHang => khachHang.MaGianHang == maGianHang &&
+            return _context.DsKhachHang.FirstOrDefault(khachHang => khachHang.MaGianHang == maGianHang &&
                                               khachHang.ThoiGianBatDauThue.Date <= time.Date &&
-                                              time.Date <= khachHang.ThoiGianKetThucThue.Date).ToList();
+                                              time.Date <= khachHang.ThoiGianKetThucThue.Date);
         }
 
 
