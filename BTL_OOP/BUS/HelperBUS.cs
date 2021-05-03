@@ -21,7 +21,7 @@ namespace BUS
 
         public static string GenerateMaKhachHang(string maGianHang, DateTime thoiDiemBatDau)
         {
-            return maGianHang + thoiDiemBatDau.ToFileTime();
+            return maGianHang + thoiDiemBatDau.Year + thoiDiemBatDau.Month + thoiDiemBatDau.Day;
         }
 
         public static void InTT<T>(T gianHang) where T : GianHangDTO

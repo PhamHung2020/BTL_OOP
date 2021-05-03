@@ -36,7 +36,7 @@ namespace BUS
 
         public List<T> TimKiemTheoMaGianHang<T>(string maGianHang) where T : GianHangDTO
         {
-            return _context.DsGianHang.Where(gianHang => gianHang.MaGianHang.Contains(maGianHang) && gianHang is T) as List<T>;
+            return _context.DsGianHang.Where(gianHang => gianHang.MaGianHang.Contains(maGianHang) && gianHang is T).ToList() as List<T>;
         }
 
         public List<T> LayDanhSachGianHang<T>() where T : GianHangDTO

@@ -27,19 +27,21 @@ namespace BUS
 
         private KhuTrungBayDAL _context;
 
-        public void Thue(KhachHangDTO khachHangMoi)
+        public bool Thue(KhachHangDTO khachHangMoi)
         {
+            bool isSuccess = true;
             try
             {
                 if (khachHangMoi.ThoiGianBatDauThue.Date <= DateTime.Now.Date &&
-                    DateTime.Now.Date <= khachHangMoi.ThoiGianKetThucThue.Date)
-                    GianHangBUS.Instance.ThayDoiTinhTrangThue(khachHangMoi.MaGianHang, true);
-                KhachHangBUS.Instance.ThemKhachHang(khachHangMoi);
+                     DateTime.Now.Date <= khachHangMoi.ThoiGianKetThucThue.Date)
+                     GianHangBUS.Instance.ThayDoiTinhTrangThue(khachHangMoi.MaGianHang, true);
+                isSuccess = KhachHangBUS.Instance.ThemKhachHang(khachHangMoi);
             }
             catch (Exception ex)
             {
                 throw ex;
             }
+            return isSuccess;
         }
 
         public decimal DoanhThu(DateTime thoiGianBatDau, DateTime thoiGianKetThuc)
@@ -69,6 +71,20 @@ namespace BUS
                 doanhThu += GianHangBUS.Instance.TimKiemTheoMaGianHang(khachHang.MaGianHang)[0].TinhChiPhi((int)time.TotalDays + 1);
             }
             return doanhThu;
+        }
+
+        public decimal DoanhThu(int thang, int year = 0)
+        {
+            if (thang < 1 || thang > 12)
+                throw new Exception("Tháng phải nằm trong khoảng 1 - 12");
+            if (year == 0)
+                year = DateTime.Now.Year;
+            else if (year < 0)
+                throw new Exception("Năm phải lớn hơn 0");
+            DateTime thoiGianBatDau = new DateTime(year, thang, 1);
+            int ngayCuoiThang = DateTime.DaysInMonth(year, thang);
+            DateTime thoiGianKetThuc = new DateTime(year, thang, ngayCuoiThang);
+            return DoanhThu(thoiGianBatDau, thoiGianKetThuc);
         }
 
         public List<int> ViTriConTrong(int tang)
