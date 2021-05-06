@@ -32,28 +32,28 @@ namespace OPP
             this.pnMenuVertical = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pnTitle = new System.Windows.Forms.Panel();
+            this.pnContent = new System.Windows.Forms.Panel();
+            this.btnMax = new System.Windows.Forms.PictureBox();
+            this.btnResize = new System.Windows.Forms.PictureBox();
+            this.btnMin = new System.Windows.Forms.PictureBox();
+            this.btnClose = new System.Windows.Forms.PictureBox();
+            this.btnMenu = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnInfo = new System.Windows.Forms.Button();
             this.btnDetail = new System.Windows.Forms.Button();
             this.btnStatistical = new System.Windows.Forms.Button();
-            this.pnTitle = new System.Windows.Forms.Panel();
-            this.btnMax = new System.Windows.Forms.PictureBox();
-            this.btnResize = new System.Windows.Forms.PictureBox();
-            this.btnMin = new System.Windows.Forms.PictureBox();
-            this.btnClose = new System.Windows.Forms.PictureBox();
-            this.btnMenu = new System.Windows.Forms.PictureBox();
-            this.pnContent = new System.Windows.Forms.Panel();
             this.pnMenuVertical.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnResize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnMenuVertical
@@ -95,105 +95,6 @@ namespace OPP
             this.label1.TabIndex = 1;
             this.label1.Text = "Store management";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::OPP.Properties.Resources.hashtag;
-            this.pictureBox1.Location = new System.Drawing.Point(2, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(63, 67);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // button3
-            // 
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = global::OPP.Properties.Resources.empleados;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 300);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(250, 40);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Thông tin liên hệ";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::OPP.Properties.Resources.pagos;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 254);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(250, 40);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Thống kê doanh thu";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // btnInfo
-            // 
-            this.btnInfo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnInfo.FlatAppearance.BorderSize = 0;
-            this.btnInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInfo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInfo.ForeColor = System.Drawing.Color.White;
-            this.btnInfo.Image = global::OPP.Properties.Resources.clientes;
-            this.btnInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInfo.Location = new System.Drawing.Point(0, 208);
-            this.btnInfo.Name = "btnInfo";
-            this.btnInfo.Size = new System.Drawing.Size(250, 40);
-            this.btnInfo.TabIndex = 2;
-            this.btnInfo.Text = "Quản lý khách hàng";
-            this.btnInfo.UseVisualStyleBackColor = true;
-            // 
-            // btnDetail
-            // 
-            this.btnDetail.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDetail.FlatAppearance.BorderSize = 0;
-            this.btnDetail.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnDetail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDetail.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDetail.ForeColor = System.Drawing.Color.White;
-            this.btnDetail.Image = global::OPP.Properties.Resources.reportes;
-            this.btnDetail.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDetail.Location = new System.Drawing.Point(0, 162);
-            this.btnDetail.Name = "btnDetail";
-            this.btnDetail.Size = new System.Drawing.Size(250, 40);
-            this.btnDetail.TabIndex = 1;
-            this.btnDetail.Text = "Thuê gian hàng";
-            this.btnDetail.UseVisualStyleBackColor = true;
-            this.btnDetail.Click += new System.EventHandler(this.btnDetail_Click);
-            // 
-            // btnStatistical
-            // 
-            this.btnStatistical.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnStatistical.FlatAppearance.BorderSize = 0;
-            this.btnStatistical.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnStatistical.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStatistical.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStatistical.ForeColor = System.Drawing.Color.White;
-            this.btnStatistical.Image = global::OPP.Properties.Resources.producto;
-            this.btnStatistical.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStatistical.Location = new System.Drawing.Point(0, 116);
-            this.btnStatistical.Name = "btnStatistical";
-            this.btnStatistical.Size = new System.Drawing.Size(250, 40);
-            this.btnStatistical.TabIndex = 0;
-            this.btnStatistical.Text = "Quản lý gian hàng";
-            this.btnStatistical.UseVisualStyleBackColor = true;
-            this.btnStatistical.Click += new System.EventHandler(this.btnStatistical_Click);
-            // 
             // pnTitle
             // 
             this.pnTitle.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -208,6 +109,15 @@ namespace OPP
             this.pnTitle.Size = new System.Drawing.Size(917, 45);
             this.pnTitle.TabIndex = 1;
             this.pnTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnTitle_MouseDown);
+            // 
+            // pnContent
+            // 
+            this.pnContent.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnContent.Location = new System.Drawing.Point(250, 45);
+            this.pnContent.Name = "pnContent";
+            this.pnContent.Size = new System.Drawing.Size(917, 605);
+            this.pnContent.TabIndex = 2;
             // 
             // btnMax
             // 
@@ -273,14 +183,106 @@ namespace OPP
             this.btnMenu.TabStop = false;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
-            // pnContent
+            // pictureBox1
             // 
-            this.pnContent.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnContent.Location = new System.Drawing.Point(250, 45);
-            this.pnContent.Name = "pnContent";
-            this.pnContent.Size = new System.Drawing.Size(917, 605);
-            this.pnContent.TabIndex = 2;
+            this.pictureBox1.Image = global::OPP.Properties.Resources.hashtag;
+            this.pictureBox1.Location = new System.Drawing.Point(2, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(63, 67);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button3
+            // 
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Image = global::OPP.Properties.Resources.empleados;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(0, 300);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(250, 40);
+            this.button3.TabIndex = 5;
+            this.button3.Text = " Thông tin liên hệ";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::OPP.Properties.Resources.pagos;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(0, 254);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(250, 40);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "        Thống kê doanh thu";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnInfo
+            // 
+            this.btnInfo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInfo.FlatAppearance.BorderSize = 0;
+            this.btnInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInfo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInfo.ForeColor = System.Drawing.Color.White;
+            this.btnInfo.Image = global::OPP.Properties.Resources.clientes;
+            this.btnInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInfo.Location = new System.Drawing.Point(0, 208);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Size = new System.Drawing.Size(250, 40);
+            this.btnInfo.TabIndex = 2;
+            this.btnInfo.Text = "         Quản lý khách hàng";
+            this.btnInfo.UseVisualStyleBackColor = true;
+            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
+            // 
+            // btnDetail
+            // 
+            this.btnDetail.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDetail.FlatAppearance.BorderSize = 0;
+            this.btnDetail.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnDetail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDetail.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDetail.ForeColor = System.Drawing.Color.White;
+            this.btnDetail.Image = global::OPP.Properties.Resources.reportes;
+            this.btnDetail.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDetail.Location = new System.Drawing.Point(0, 162);
+            this.btnDetail.Name = "btnDetail";
+            this.btnDetail.Size = new System.Drawing.Size(250, 40);
+            this.btnDetail.TabIndex = 1;
+            this.btnDetail.Text = "Thuê gian hàng";
+            this.btnDetail.UseVisualStyleBackColor = true;
+            this.btnDetail.Click += new System.EventHandler(this.btnDetail_Click);
+            // 
+            // btnStatistical
+            // 
+            this.btnStatistical.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStatistical.FlatAppearance.BorderSize = 0;
+            this.btnStatistical.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnStatistical.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStatistical.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStatistical.ForeColor = System.Drawing.Color.White;
+            this.btnStatistical.Image = global::OPP.Properties.Resources.producto;
+            this.btnStatistical.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStatistical.Location = new System.Drawing.Point(0, 116);
+            this.btnStatistical.Name = "btnStatistical";
+            this.btnStatistical.Size = new System.Drawing.Size(250, 40);
+            this.btnStatistical.TabIndex = 0;
+            this.btnStatistical.Text = "     Quản lý gian hàng";
+            this.btnStatistical.UseVisualStyleBackColor = true;
+            this.btnStatistical.Click += new System.EventHandler(this.btnStatistical_Click);
             // 
             // Form1
             // 
@@ -296,13 +298,13 @@ namespace OPP
             this.pnMenuVertical.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnTitle.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnResize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

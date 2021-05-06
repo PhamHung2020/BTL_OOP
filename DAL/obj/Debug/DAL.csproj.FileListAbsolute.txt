@@ -1,0 +1,18 @@
+C:\Users\ACER\Desktop\BTL_OOP\BTL_OOP\DAL\bin\Debug\DAL.dll
+C:\Users\ACER\Desktop\BTL_OOP\BTL_OOP\DAL\bin\Debug\DAL.pdb
+C:\Users\ACER\Desktop\BTL_OOP\BTL_OOP\DAL\bin\Debug\DTO.dll
+C:\Users\ACER\Desktop\BTL_OOP\BTL_OOP\DAL\bin\Debug\DTO.pdb
+C:\Users\ACER\Desktop\BTL_OOP\BTL_OOP\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\ACER\Desktop\BTL_OOP\BTL_OOP\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\ACER\Desktop\BTL_OOP\BTL_OOP\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\ACER\Desktop\BTL_OOP\BTL_OOP\DAL\obj\Debug\DAL.dll
+C:\Users\ACER\Desktop\BTL_OOP\BTL_OOP\DAL\obj\Debug\DAL.pdb
+C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\DAL\bin\Debug\DAL.dll
+C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\DAL\bin\Debug\DAL.pdb
+C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\DAL\bin\Debug\DTO.dll
+C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\DAL\bin\Debug\DTO.pdb
+C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\DAL\obj\Debug\DAL.dll
+C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\DAL\obj\Debug\DAL.pdb

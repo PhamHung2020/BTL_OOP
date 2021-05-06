@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Data.SqlClient;
+using DTO;
+using BUS;
 
 namespace OPP
 {

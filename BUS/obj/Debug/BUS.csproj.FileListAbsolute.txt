@@ -1,0 +1,22 @@
+C:\Users\ACER\Desktop\BTL_OOP\BTL_OOP\BUS\bin\Debug\BUS.dll
+C:\Users\ACER\Desktop\BTL_OOP\BTL_OOP\BUS\bin\Debug\BUS.pdb
+C:\Users\ACER\Desktop\BTL_OOP\BTL_OOP\BUS\bin\Debug\DAL.dll
+C:\Users\ACER\Desktop\BTL_OOP\BTL_OOP\BUS\bin\Debug\DTO.dll
+C:\Users\ACER\Desktop\BTL_OOP\BTL_OOP\BUS\bin\Debug\DAL.pdb
+C:\Users\ACER\Desktop\BTL_OOP\BTL_OOP\BUS\bin\Debug\DTO.pdb
+C:\Users\ACER\Desktop\BTL_OOP\BTL_OOP\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+C:\Users\ACER\Desktop\BTL_OOP\BTL_OOP\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Users\ACER\Desktop\BTL_OOP\BTL_OOP\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Users\ACER\Desktop\BTL_OOP\BTL_OOP\BUS\obj\Debug\BUS.dll
+C:\Users\ACER\Desktop\BTL_OOP\BTL_OOP\BUS\obj\Debug\BUS.pdb
+C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\BUS\bin\Debug\BUS.dll
+C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\BUS\bin\Debug\BUS.pdb
+C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\BUS\bin\Debug\DAL.dll
+C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\BUS\bin\Debug\DTO.dll
+C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\BUS\bin\Debug\DAL.pdb
+C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\BUS\bin\Debug\DTO.pdb
+C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\BUS\obj\Debug\BUS.dll
+C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\BUS\obj\Debug\BUS.pdb

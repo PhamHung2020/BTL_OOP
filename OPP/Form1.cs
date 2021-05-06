@@ -70,7 +70,7 @@ namespace OPP
         }
         private void btnStatistical_Click(object sender, EventArgs e)
         {
-            addFrm(new frmStatistical());
+            addFrm(new frmQuanLyGianHang());
         }
 
         // Nắm vào vùng title di chuyển app
@@ -87,7 +87,17 @@ namespace OPP
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            addFrm(new frmThongKeDoanhThu());
+        }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+            addFrm(new frmThongKeKhachHang());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            addFrm(new frmThongTinLienHe());
         }
     }
 }
