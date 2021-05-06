@@ -27,21 +27,21 @@ namespace Test
 
             //GianHangBUS.Instance.ThayDoiTinhTrangThue("TC101", true);
 
-            //var list = GianHangBUS.Instance.DanhSachGianHangTheoTinhTrangThue(true);
-            //foreach (var newgianHang in list)
-            //{
-            //    HelperBUS.InTT<GianHangDTO>(newgianHang);
-            //    Console.WriteLine();
-            //}
-            //KhachHangDTO khachHang = new KhachHangDTO("00002", "Dong Tien", "Hai Phong", "TC202", new DateTime(2021, 5, 1), new DateTime(2021, 5, 24), 20000000);
-            //KhuTrungBayBUS.Instance.Thue(khachHang);
-            //KhuTrungBayBUS.Instance.KiemTraTinhTrangThue();
-            //var newlist = GianHangBUS.Instance.DanhSachGianHangTheoTinhTrangThue(true);
-            //foreach (var newgianHang in newlist)
-            //{
-            //    HelperBUS.InTT<GianHangDTO>(newgianHang);
-            //    Console.WriteLine();
-            //}
+            var list = GianHangBUS.Instance.DanhSachGianHangTheoTinhTrangThue(true);
+            foreach (var newgianHang in list)
+            {
+                HelperBUS.InTT<GianHangDTO>(newgianHang);
+                Console.WriteLine();
+            }
+            KhachHangDTO khachHang = new KhachHangDTO("00002", "Dong Tien", "Hai Phong", "TC202", new DateTime(2021, 5, 4), new DateTime(2021, 5, 24), 20000000);
+            KhuTrungBayBUS.Instance.Thue(khachHang);
+            KhuTrungBayBUS.Instance.KiemTraTinhTrangThue();
+            var newlist = GianHangBUS.Instance.DanhSachGianHangTheoTinhTrangThue(true);
+            foreach (var newgianHang in newlist)
+            {
+                HelperBUS.InTT<GianHangDTO>(newgianHang);
+                Console.WriteLine();
+            }
             //var gianHang2 = GianHangBUS.Instance.TimKiemTheoMaGianHang("TC101");
             //HelperBUS.InTT<GianHangDTO>(gianHang2);
 
@@ -56,12 +56,12 @@ namespace Test
             //HelperBUS.InTT(khachHang);
 
             //Console.WriteLine(KhuTrungBayBUS.Instance.DoanhThu(new DateTime(2021, 3, 1), new DateTime(2021, 3, 10)));
-            var list = GianHangBUS.Instance.TimKiemTheoMaGianHang<GianHangDTO>("C1");
-            foreach (var gianHang in list)
-            {
-                HelperBUS.InTT<GianHangDTO>(gianHang);
-                Console.WriteLine();
-            }
+            //var list = GianHangBUS.Instance.TimKiemTheoMaGianHang<GianHangDTO>("C1");
+            //foreach (var gianHang in list)
+            //{
+            //    HelperBUS.InTT<GianHangDTO>(gianHang);
+            //    Console.WriteLine();
+            //}
 
 
             Console.ReadKey();

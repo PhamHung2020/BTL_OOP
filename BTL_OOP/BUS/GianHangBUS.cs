@@ -56,7 +56,7 @@ namespace BUS
             {
                 if (gianHang.ViTriGianHang == gianHangMoi.ViTriGianHang)
                 {
-                    throw new Exception($"Gian hàng mới có vị trí trùng với gian hàng có mã {gianHang.MaGianHang}");
+                    throw new Exception($"Gian hàng mới có vị trí trùng\nvới gian hàng có mã {gianHang.MaGianHang}");
                 }
             }
             _context.DsGianHang.Add(gianHangMoi);
@@ -72,7 +72,7 @@ namespace BUS
             }
             else if (gianHang.TinhTrangThue)
             {
-                throw new Exception("Gian hàng đang được thuê. Cập nhật không thành công");
+                throw new Exception("Gian hàng đang được thuê.\nCập nhật không thành công");
             }
             int index = _context.DsGianHang.IndexOf(gianHang);
             _context.DsGianHang[index] = gianHangCapNhat;
@@ -88,7 +88,7 @@ namespace BUS
             }
             else if (gianHang.TinhTrangThue)
             {
-                throw new Exception("Gian hàng đang được thuê. Xóa không thành công");
+                throw new Exception("Gian hàng đang được thuê.\nXóa không thành công");
             }
             _context.DsGianHang.Remove(gianHang);
             return true;
@@ -123,7 +123,7 @@ namespace BUS
             }
             else if (tinhTrangThue && gianHang.TinhTrangThue)
             {
-                throw new Exception("Gian hàng này hiện tại đang được thuê bởi 1 khách hàng khác");
+                throw new Exception("Gian hàng này hiện tại đang\nđược thuê bởi 1 khách hàng khác");
             }
             gianHang.TinhTrangThue = tinhTrangThue;
         }
