@@ -59,11 +59,13 @@ namespace BUS
             //}
             foreach (var khachHang in _context.DsKhachHang)
             {
-                if (khachHangMoi.MaGianHang == khachHang.MaGianHang &&
-                   ((khachHang.ThoiGianBatDauThue.Date <= khachHangMoi.ThoiGianKetThucThue.Date &&
-                    khachHang.ThoiGianKetThucThue.Date >= khachHangMoi.ThoiGianKetThucThue.Date) ||
-                   (khachHang.ThoiGianBatDauThue.Date <= khachHangMoi.ThoiGianBatDauThue.Date &&
-                    khachHang.ThoiGianKetThucThue.Date >= khachHangMoi.ThoiGianBatDauThue.Date)))
+                if  (khachHangMoi.MaGianHang == khachHang.MaGianHang &&
+                   ((khachHangMoi.ThoiGianBatDauThue.Date <= khachHang.ThoiGianBatDauThue.Date &&
+                    khachHangMoi.ThoiGianKetThucThue.Date >= khachHang.ThoiGianKetThucThue.Date) ||
+                   (khachHangMoi.ThoiGianBatDauThue.Date >= khachHang.ThoiGianBatDauThue.Date && 
+                    khachHangMoi.ThoiGianBatDauThue.Date <= khachHang.ThoiGianKetThucThue.Date) || 
+                   (khachHangMoi.ThoiGianKetThucThue.Date >= khachHang.ThoiGianBatDauThue.Date &&
+                    khachHangMoi.ThoiGianKetThucThue.Date <= khachHang.ThoiGianKetThucThue.Date)))
                 {
                     throw new Exception($"Gian hàng {khachHangMoi.MaGianHang} đang được thuê bởi\nkhách hàng {khachHang.MaKhachHang} từ {khachHang.ThoiGianBatDauThue.ToString()} đến {khachHang.ThoiGianKetThucThue.ToString()}");
                 }

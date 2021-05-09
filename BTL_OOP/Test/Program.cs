@@ -33,11 +33,19 @@ namespace Test
                 HelperBUS.InTT<GianHangDTO>(newgianHang);
                 Console.WriteLine();
             }
-            KhachHangDTO khachHang = new KhachHangDTO("00002", "Dong Tien", "Hai Phong", "TC202", new DateTime(2021, 5, 4), new DateTime(2021, 5, 24), 20000000);
+            KhachHangDTO khachHang = new KhachHangDTO("00002", "Dong Tien", "Hai Phong", "TC202", new DateTime(2021, 5, 6), new DateTime(2021, 5, 12), 20000000);
             KhuTrungBayBUS.Instance.Thue(khachHang);
             KhuTrungBayBUS.Instance.KiemTraTinhTrangThue();
             var newlist = GianHangBUS.Instance.DanhSachGianHangTheoTinhTrangThue(true);
             foreach (var newgianHang in newlist)
+            {
+                HelperBUS.InTT<GianHangDTO>(newgianHang);
+                Console.WriteLine();
+            }
+            KhachHangDTO khachHang2 = new KhachHangDTO("00003", "Manh Hung", "Lang Son", "TC202", new DateTime(2021, 5, 4), new DateTime(2021, 5, 10), 20000000);
+            KhuTrungBayBUS.Instance.Thue(khachHang2);
+            var newListAgain = GianHangBUS.Instance.DanhSachGianHangTheoTinhTrangThue(true);
+            foreach (var newgianHang in newListAgain)
             {
                 HelperBUS.InTT<GianHangDTO>(newgianHang);
                 Console.WriteLine();
