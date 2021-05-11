@@ -44,14 +44,17 @@ namespace OPP
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnDong = new Guna.UI2.WinForms.Guna2Button();
             this.btnThem = new Guna.UI2.WinForms.Guna2Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(266, 11);
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.White;
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(204, 12);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(251, 35);
             this.guna2HtmlLabel2.TabIndex = 3;
@@ -68,7 +71,8 @@ namespace OPP
             this.tbTenKhachHang.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbTenKhachHang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbTenKhachHang.FocusedState.Parent = this.tbTenKhachHang;
-            this.tbTenKhachHang.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbTenKhachHang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTenKhachHang.ForeColor = System.Drawing.Color.Black;
             this.tbTenKhachHang.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbTenKhachHang.HoverState.Parent = this.tbTenKhachHang;
             this.tbTenKhachHang.Location = new System.Drawing.Point(295, 58);
@@ -102,7 +106,8 @@ namespace OPP
             this.tbDiaChi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbDiaChi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbDiaChi.FocusedState.Parent = this.tbDiaChi;
-            this.tbDiaChi.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbDiaChi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDiaChi.ForeColor = System.Drawing.Color.Black;
             this.tbDiaChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbDiaChi.HoverState.Parent = this.tbDiaChi;
             this.tbDiaChi.Location = new System.Drawing.Point(295, 101);
@@ -147,7 +152,8 @@ namespace OPP
             this.tbMaGianHang.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbMaGianHang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbMaGianHang.FocusedState.Parent = this.tbMaGianHang;
-            this.tbMaGianHang.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbMaGianHang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbMaGianHang.ForeColor = System.Drawing.Color.Black;
             this.tbMaGianHang.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbMaGianHang.HoverState.Parent = this.tbMaGianHang;
             this.tbMaGianHang.Location = new System.Drawing.Point(295, 143);
@@ -175,7 +181,7 @@ namespace OPP
             // 
             this.dtpBatDau.CheckedState.Parent = this.dtpBatDau;
             this.dtpBatDau.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.dtpBatDau.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpBatDau.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.dtpBatDau.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dtpBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dtpBatDau.HoverState.Parent = this.dtpBatDau;
@@ -230,7 +236,8 @@ namespace OPP
             this.tbTienDatCoc.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbTienDatCoc.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbTienDatCoc.FocusedState.Parent = this.tbTienDatCoc;
-            this.tbTienDatCoc.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbTienDatCoc.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTienDatCoc.ForeColor = System.Drawing.Color.Black;
             this.tbTienDatCoc.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbTienDatCoc.HoverState.Parent = this.tbTienDatCoc;
             this.tbTienDatCoc.Location = new System.Drawing.Point(295, 263);
@@ -256,6 +263,7 @@ namespace OPP
             // btnDong
             // 
             this.btnDong.CheckedState.Parent = this.btnDong;
+            this.btnDong.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDong.CustomImages.Parent = this.btnDong;
             this.btnDong.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDong.ForeColor = System.Drawing.Color.White;
@@ -271,6 +279,7 @@ namespace OPP
             // btnThem
             // 
             this.btnThem.CheckedState.Parent = this.btnThem;
+            this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThem.CustomImages.Parent = this.btnThem;
             this.btnThem.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.White;
@@ -283,11 +292,32 @@ namespace OPP
             this.btnThem.Text = "Thêm";
             this.btnThem.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.panel1.Controls.Add(this.guna2HtmlLabel2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(707, 52);
+            this.panel1.TabIndex = 18;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 420);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(707, 19);
+            this.panel2.TabIndex = 19;
+            // 
             // frmThongTinKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(752, 439);
+            this.ClientSize = new System.Drawing.Size(707, 439);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnDong);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.tbTienDatCoc);
@@ -302,13 +332,14 @@ namespace OPP
             this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.tbTenKhachHang);
             this.Controls.Add(this.guna2HtmlLabel1);
-            this.Controls.Add(this.guna2HtmlLabel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmThongTinKhachHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmThongTinKhachHang";
             this.Load += new System.EventHandler(this.frmThongTinKhachHang_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -331,5 +362,7 @@ namespace OPP
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2Button btnDong;
         private Guna.UI2.WinForms.Guna2Button btnThem;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

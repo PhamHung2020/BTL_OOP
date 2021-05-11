@@ -84,10 +84,10 @@ namespace OPP
             this.guna2GroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2GroupBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GroupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2GroupBox2.Location = new System.Drawing.Point(0, 122);
+            this.guna2GroupBox2.Location = new System.Drawing.Point(0, 141);
             this.guna2GroupBox2.Name = "guna2GroupBox2";
             this.guna2GroupBox2.ShadowDecoration.Parent = this.guna2GroupBox2;
-            this.guna2GroupBox2.Size = new System.Drawing.Size(917, 180);
+            this.guna2GroupBox2.Size = new System.Drawing.Size(917, 161);
             this.guna2GroupBox2.TabIndex = 1;
             this.guna2GroupBox2.Text = "Tính toán doanh thu";
             // 
@@ -102,13 +102,15 @@ namespace OPP
             this.tbDoanhThu.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbDoanhThu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbDoanhThu.FocusedState.Parent = this.tbDoanhThu;
-            this.tbDoanhThu.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbDoanhThu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDoanhThu.ForeColor = System.Drawing.Color.Black;
             this.tbDoanhThu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbDoanhThu.HoverState.Parent = this.tbDoanhThu;
             this.tbDoanhThu.Location = new System.Drawing.Point(646, 100);
             this.tbDoanhThu.Name = "tbDoanhThu";
             this.tbDoanhThu.PasswordChar = '\0';
             this.tbDoanhThu.PlaceholderText = "";
+            this.tbDoanhThu.ReadOnly = true;
             this.tbDoanhThu.SelectedText = "";
             this.tbDoanhThu.ShadowDecoration.Parent = this.tbDoanhThu;
             this.tbDoanhThu.Size = new System.Drawing.Size(259, 36);
@@ -147,7 +149,7 @@ namespace OPP
             this.bunifuButton1.ButtonTextMarginLeft = 0;
             this.bunifuButton1.ColorContrastOnClick = 45;
             this.bunifuButton1.ColorContrastOnHover = 45;
-            this.bunifuButton1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges1.BottomLeft = true;
             borderEdges1.BottomRight = true;
             borderEdges1.TopLeft = true;
@@ -224,6 +226,7 @@ namespace OPP
             this.dtpKetThuc.BackColor = System.Drawing.Color.Transparent;
             this.dtpKetThuc.BorderRadius = 1;
             this.dtpKetThuc.Color = System.Drawing.Color.Silver;
+            this.dtpKetThuc.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpKetThuc.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
             this.dtpKetThuc.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
             this.dtpKetThuc.DisabledColor = System.Drawing.Color.Gray;
@@ -231,7 +234,7 @@ namespace OPP
             this.dtpKetThuc.DPHeight = 0;
             this.dtpKetThuc.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dtpKetThuc.FillDatePicker = false;
-            this.dtpKetThuc.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpKetThuc.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpKetThuc.ForeColor = System.Drawing.Color.Black;
             this.dtpKetThuc.Icon = ((System.Drawing.Image)(resources.GetObject("dtpKetThuc.Icon")));
             this.dtpKetThuc.IconColor = System.Drawing.Color.Gray;
@@ -242,12 +245,14 @@ namespace OPP
             this.dtpKetThuc.Name = "dtpKetThuc";
             this.dtpKetThuc.Size = new System.Drawing.Size(292, 32);
             this.dtpKetThuc.TabIndex = 3;
+            this.dtpKetThuc.Value = new System.DateTime(2021, 5, 11, 19, 22, 0, 0);
             // 
             // dtpBatDau
             // 
             this.dtpBatDau.BackColor = System.Drawing.Color.Transparent;
             this.dtpBatDau.BorderRadius = 1;
             this.dtpBatDau.Color = System.Drawing.Color.Silver;
+            this.dtpBatDau.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpBatDau.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
             this.dtpBatDau.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
             this.dtpBatDau.DisabledColor = System.Drawing.Color.Gray;
@@ -255,7 +260,7 @@ namespace OPP
             this.dtpBatDau.DPHeight = 0;
             this.dtpBatDau.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dtpBatDau.FillDatePicker = false;
-            this.dtpBatDau.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpBatDau.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpBatDau.ForeColor = System.Drawing.Color.Black;
             this.dtpBatDau.Icon = ((System.Drawing.Image)(resources.GetObject("dtpBatDau.Icon")));
             this.dtpBatDau.IconColor = System.Drawing.Color.Gray;
@@ -266,6 +271,7 @@ namespace OPP
             this.dtpBatDau.Name = "dtpBatDau";
             this.dtpBatDau.Size = new System.Drawing.Size(292, 32);
             this.dtpBatDau.TabIndex = 2;
+            this.dtpBatDau.Value = new System.DateTime(2021, 5, 11, 19, 22, 0, 0);
             // 
             // bunifuLabel3
             // 
@@ -308,9 +314,9 @@ namespace OPP
             this.guna2GroupBox1.Location = new System.Drawing.Point(0, 0);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.ShadowDecoration.Parent = this.guna2GroupBox1;
-            this.guna2GroupBox1.Size = new System.Drawing.Size(917, 122);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(917, 141);
             this.guna2GroupBox1.TabIndex = 0;
-            this.guna2GroupBox1.Text = "Tổng số doanh thu:";
+            this.guna2GroupBox1.Text = "Thống kê:";
             // 
             // tbTongDoanhThu
             // 
@@ -329,9 +335,11 @@ namespace OPP
             this.tbTongDoanhThu.BorderThickness = 1;
             this.tbTongDoanhThu.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.tbTongDoanhThu.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbTongDoanhThu.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.tbTongDoanhThu.DefaultFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbTongDoanhThu.DefaultText = "";
+            this.tbTongDoanhThu.Enabled = false;
             this.tbTongDoanhThu.FillColor = System.Drawing.Color.White;
+            this.tbTongDoanhThu.ForeColor = System.Drawing.Color.Black;
             this.tbTongDoanhThu.HideSelection = true;
             this.tbTongDoanhThu.IconLeft = null;
             this.tbTongDoanhThu.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -339,7 +347,7 @@ namespace OPP
             this.tbTongDoanhThu.IconRight = null;
             this.tbTongDoanhThu.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbTongDoanhThu.Lines = new string[0];
-            this.tbTongDoanhThu.Location = new System.Drawing.Point(260, 57);
+            this.tbTongDoanhThu.Location = new System.Drawing.Point(173, 57);
             this.tbTongDoanhThu.MaxLength = 32767;
             this.tbTongDoanhThu.MinimumSize = new System.Drawing.Size(1, 1);
             this.tbTongDoanhThu.Modified = false;
@@ -362,10 +370,10 @@ namespace OPP
             this.tbTongDoanhThu.OnHoverState = stateProperties3;
             stateProperties4.BorderColor = System.Drawing.Color.Silver;
             stateProperties4.FillColor = System.Drawing.Color.White;
-            stateProperties4.ForeColor = System.Drawing.Color.Empty;
+            stateProperties4.ForeColor = System.Drawing.Color.Black;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.tbTongDoanhThu.OnIdleState = stateProperties4;
-            this.tbTongDoanhThu.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbTongDoanhThu.Padding = new System.Windows.Forms.Padding(3);
             this.tbTongDoanhThu.PasswordChar = '\0';
             this.tbTongDoanhThu.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.tbTongDoanhThu.PlaceholderText = "Enter text";
@@ -375,7 +383,7 @@ namespace OPP
             this.tbTongDoanhThu.SelectionLength = 0;
             this.tbTongDoanhThu.SelectionStart = 0;
             this.tbTongDoanhThu.ShortcutsEnabled = true;
-            this.tbTongDoanhThu.Size = new System.Drawing.Size(318, 32);
+            this.tbTongDoanhThu.Size = new System.Drawing.Size(318, 42);
             this.tbTongDoanhThu.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.tbTongDoanhThu.TabIndex = 1;
             this.tbTongDoanhThu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -393,7 +401,7 @@ namespace OPP
             this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.bunifuLabel1.Location = new System.Drawing.Point(115, 64);
+            this.bunifuLabel1.Location = new System.Drawing.Point(28, 69);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel1.Size = new System.Drawing.Size(139, 25);
@@ -439,7 +447,7 @@ namespace OPP
             this.bunifuDatavizBasic1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuDatavizBasic1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuDatavizBasic1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuDatavizBasic1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuDatavizBasic1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuDatavizBasic1.Name = "bunifuDatavizBasic1";
             this.bunifuDatavizBasic1.Size = new System.Drawing.Size(917, 303);
             this.bunifuDatavizBasic1.TabIndex = 0;
@@ -457,6 +465,7 @@ namespace OPP
             this.Name = "frmThongKeDoanhThu";
             this.Text = "frmThongKeDoanhThu";
             this.Load += new System.EventHandler(this.frmThongKeDoanhThu_Load);
+            this.Resize += new System.EventHandler(this.frmThongKeDoanhThu_Resize);
             this.bunifuPanel1.ResumeLayout(false);
             this.guna2GroupBox2.ResumeLayout(false);
             this.guna2GroupBox2.PerformLayout();

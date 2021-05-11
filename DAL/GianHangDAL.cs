@@ -24,7 +24,7 @@ namespace DAL
             _dsGianHang = new List<GianHangDTO>()
             {
                 new GianHangCaoCapDTO("CC102", 5.6, "102", false, 5, 6),
-                new GianHangCaoCapDTO("CC203", 10.25, "202", false, 10, 12),
+                new GianHangCaoCapDTO("CC203", 10.25, "203", false, 10, 12),
                 new GianHangTieuChuanDTO("TC101", 5.6, "101", true, "Ton", "Nhua"),
                 new GianHangTieuChuanDTO("TC202", 10.25, "202", false, "Sat", "Dong"),
                 new GianHangTieuChuanDTO("TC205", 13.6, "205", true, "Sat", "Vai"),
@@ -34,7 +34,7 @@ namespace DAL
                 new GianHangTieuChuanDTO("TC406", 8.87, "406", false, "Ton", "Thep"),
                 new GianHangCaoCapDTO("CC103", 16.4, "103", false, 5, 6),
                 new GianHangCaoCapDTO("CC201", 17.5, "201", false, 6, 8),
-                new GianHangCaoCapDTO("CC204", 17.2, "202", false, 5, 5),
+                new GianHangCaoCapDTO("CC204", 17.2, "204", false, 5, 5),
                 new GianHangCaoCapDTO("CC301", 18.7, "301", false, 7, 8),
                 new GianHangCaoCapDTO("CC302", 19, "302", false, 8, 8),
         };

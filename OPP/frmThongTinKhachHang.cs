@@ -22,43 +22,64 @@ namespace OPP
 
         private void frmThongTinKhachHang_Load(object sender, EventArgs e)
         {
-
+            dtpBatDau.Value = DateTime.Now;
+            dtpKetThuc.Value = DateTime.Now;
         }
-
+        public void Alert(string msg, frmThongBao.alertTypeEnum type)
+        {
+            frmThongBao f = new frmThongBao();
+            f.setAlert(msg, type);
+        }
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             try
             {
-                if(tbTenKhachHang.Text == "" || tbDiaChi.Text == "")
+                if(tbTenKhachHang.Text == "" || tbDiaChi.Text == "" || tbTienDatCoc.Text == "")
                 {
-                    new frmThongBao("Bạn chưa điền đủ thông tin\nĐăng kí không thành công", 1).Show();
-                } else
-                {
-                    string maKhachHang = HelperBUS.GenerateMaKhachHang(tbMaGianHang.Text, DateTime.Parse(dtpBatDau.Text));
-                    DateTime time = DateTime.Parse(dtpBatDau.Text);
-                    KhachHangDTO khachHang = new KhachHangDTO(maKhachHang, tbTenKhachHang.Text, tbDiaChi.Text, tbMaGianHang.Text, DateTime.Parse(dtpBatDau.Text), DateTime.Parse(dtpKetThuc.Text), Decimal.Parse(tbTienDatCoc.Text));
-                    if(KhuTrungBayBUS.Instance.Thue(khachHang))
+                    if(dtpBatDau.Value > dtpKetThuc.Value)
                     {
-                        GianHangBUS.Instance.ThayDoiTinhTrangThue(khachHang.MaGianHang, true);
-                        new frmThongBao("Thêm khách hàng thành công", 0).Show();
-                        DialogResult = DialogResult.Yes;
-                        this.Close();
+                        this.Alert("Thông tin không hợp lệ!", frmThongBao.alertTypeEnum.Warning);
                     }
                     else
                     {
-                        new frmThongBao("Thêm khách hàng thất bại", 1).Show();
+
+                        this.Alert("Bạn chưa điền đủ thông tin\nĐăng kí không thành công", frmThongBao.alertTypeEnum.Warning);
+                    }
+                }
+                else
+                {
+                    if(dtpBatDau.Value > dtpKetThuc.Value)
+                    {
+                        this.Alert("Thông tin không hợp lệ!", frmThongBao.alertTypeEnum.Warning);
+                    } else
+                    {
+                        string maKhachHang = HelperBUS.GenerateMaKhachHang(tbMaGianHang.Text, DateTime.Parse(dtpBatDau.Text));
+                        DateTime time = DateTime.Parse(dtpBatDau.Text);
+                        KhachHangDTO khachHang = new KhachHangDTO(maKhachHang, tbTenKhachHang.Text, tbDiaChi.Text, tbMaGianHang.Text, DateTime.Parse(dtpBatDau.Text), DateTime.Parse(dtpKetThuc.Text), Decimal.Parse(tbTienDatCoc.Text));
+                        if(KhuTrungBayBUS.Instance.Thue(khachHang))
+                        {
+
+                            this.Alert("Thêm khách hàng thành công", frmThongBao.alertTypeEnum.Success);
+                            DialogResult = DialogResult.Yes;
+                            this.Close();
+                        }
+                        else
+                        {
+                            this.Alert("Thêm khách hàng thất bại", frmThongBao.alertTypeEnum.Error);
+                        }
                     }    
+                    
                 }    
 
             } catch(Exception error)
             {
-                new frmThongBao(error.Message, 1).Show();
+                this.Alert(error.Message, frmThongBao.alertTypeEnum.Error);
             }
         }
 
         private void btnDong_Click(object sender, EventArgs e)
         {
-            if(new frmTinNhan("Bạn có muổn thoát?").ShowDialog() == DialogResult.Yes)
+            if(new frmTinNhan("Bạn có muốn thoát không?").ShowDialog() == DialogResult.Yes)
             {
                 DialogResult = DialogResult.No;
                 this.Close();

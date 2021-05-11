@@ -32,28 +32,28 @@ namespace OPP
             this.pnMenuVertical = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pnTitle = new System.Windows.Forms.Panel();
-            this.pnContent = new System.Windows.Forms.Panel();
-            this.btnMax = new System.Windows.Forms.PictureBox();
-            this.btnResize = new System.Windows.Forms.PictureBox();
-            this.btnMin = new System.Windows.Forms.PictureBox();
-            this.btnClose = new System.Windows.Forms.PictureBox();
-            this.btnMenu = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnInfo = new System.Windows.Forms.Button();
             this.btnDetail = new System.Windows.Forms.Button();
             this.btnStatistical = new System.Windows.Forms.Button();
+            this.pnTitle = new System.Windows.Forms.Panel();
+            this.btnMax = new System.Windows.Forms.PictureBox();
+            this.btnResize = new System.Windows.Forms.PictureBox();
+            this.btnMin = new System.Windows.Forms.PictureBox();
+            this.btnClose = new System.Windows.Forms.PictureBox();
+            this.btnMenu = new System.Windows.Forms.PictureBox();
+            this.pnContent = new System.Windows.Forms.Panel();
             this.pnMenuVertical.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnResize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnMenuVertical
@@ -82,6 +82,8 @@ namespace OPP
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 68);
             this.panel1.TabIndex = 6;
+            this.panel1.Click += new System.EventHandler(this.panel1_Click);
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label1
             // 
@@ -94,94 +96,7 @@ namespace OPP
             this.label1.Size = new System.Drawing.Size(189, 22);
             this.label1.TabIndex = 1;
             this.label1.Text = "Store management";
-            // 
-            // pnTitle
-            // 
-            this.pnTitle.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnTitle.Controls.Add(this.btnMax);
-            this.pnTitle.Controls.Add(this.btnResize);
-            this.pnTitle.Controls.Add(this.btnMin);
-            this.pnTitle.Controls.Add(this.btnClose);
-            this.pnTitle.Controls.Add(this.btnMenu);
-            this.pnTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnTitle.Location = new System.Drawing.Point(250, 0);
-            this.pnTitle.Name = "pnTitle";
-            this.pnTitle.Size = new System.Drawing.Size(917, 45);
-            this.pnTitle.TabIndex = 1;
-            this.pnTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnTitle_MouseDown);
-            // 
-            // pnContent
-            // 
-            this.pnContent.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnContent.Location = new System.Drawing.Point(250, 45);
-            this.pnContent.Name = "pnContent";
-            this.pnContent.Size = new System.Drawing.Size(917, 605);
-            this.pnContent.TabIndex = 2;
-            // 
-            // btnMax
-            // 
-            this.btnMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMax.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMax.Image = global::OPP.Properties.Resources.icon_restaurar;
-            this.btnMax.Location = new System.Drawing.Point(866, 7);
-            this.btnMax.Name = "btnMax";
-            this.btnMax.Size = new System.Drawing.Size(20, 20);
-            this.btnMax.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnMax.TabIndex = 5;
-            this.btnMax.TabStop = false;
-            this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
-            // 
-            // btnResize
-            // 
-            this.btnResize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnResize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnResize.Image = global::OPP.Properties.Resources.icon_maximizar;
-            this.btnResize.Location = new System.Drawing.Point(866, 7);
-            this.btnResize.Name = "btnResize";
-            this.btnResize.Size = new System.Drawing.Size(20, 20);
-            this.btnResize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnResize.TabIndex = 4;
-            this.btnResize.TabStop = false;
-            this.btnResize.Click += new System.EventHandler(this.btnResize_Click);
-            // 
-            // btnMin
-            // 
-            this.btnMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMin.Image = global::OPP.Properties.Resources.icon_minimizar;
-            this.btnMin.Location = new System.Drawing.Point(840, 7);
-            this.btnMin.Name = "btnMin";
-            this.btnMin.Size = new System.Drawing.Size(20, 20);
-            this.btnMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnMin.TabIndex = 2;
-            this.btnMin.TabStop = false;
-            this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.Image = global::OPP.Properties.Resources.icon_cerrar2;
-            this.btnClose.Location = new System.Drawing.Point(892, 7);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(20, 20);
-            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnClose.TabIndex = 1;
-            this.btnClose.TabStop = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnMenu
-            // 
-            this.btnMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMenu.Image = global::OPP.Properties.Resources.Mobile_Menu_Icon;
-            this.btnMenu.Location = new System.Drawing.Point(6, 7);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(35, 35);
-            this.btnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnMenu.TabIndex = 0;
-            this.btnMenu.TabStop = false;
-            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
             // 
@@ -193,6 +108,7 @@ namespace OPP
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // button3
             // 
@@ -284,6 +200,96 @@ namespace OPP
             this.btnStatistical.UseVisualStyleBackColor = true;
             this.btnStatistical.Click += new System.EventHandler(this.btnStatistical_Click);
             // 
+            // pnTitle
+            // 
+            this.pnTitle.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnTitle.Controls.Add(this.btnMax);
+            this.pnTitle.Controls.Add(this.btnResize);
+            this.pnTitle.Controls.Add(this.btnMin);
+            this.pnTitle.Controls.Add(this.btnClose);
+            this.pnTitle.Controls.Add(this.btnMenu);
+            this.pnTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnTitle.Location = new System.Drawing.Point(250, 0);
+            this.pnTitle.Name = "pnTitle";
+            this.pnTitle.Size = new System.Drawing.Size(917, 45);
+            this.pnTitle.TabIndex = 1;
+            this.pnTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnTitle_MouseDown);
+            // 
+            // btnMax
+            // 
+            this.btnMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMax.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMax.Image = global::OPP.Properties.Resources.icon_restaurar;
+            this.btnMax.Location = new System.Drawing.Point(866, 7);
+            this.btnMax.Name = "btnMax";
+            this.btnMax.Size = new System.Drawing.Size(20, 20);
+            this.btnMax.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnMax.TabIndex = 5;
+            this.btnMax.TabStop = false;
+            this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
+            // 
+            // btnResize
+            // 
+            this.btnResize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnResize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnResize.Image = global::OPP.Properties.Resources.icon_maximizar;
+            this.btnResize.Location = new System.Drawing.Point(866, 7);
+            this.btnResize.Name = "btnResize";
+            this.btnResize.Size = new System.Drawing.Size(20, 20);
+            this.btnResize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnResize.TabIndex = 4;
+            this.btnResize.TabStop = false;
+            this.btnResize.Click += new System.EventHandler(this.btnResize_Click);
+            // 
+            // btnMin
+            // 
+            this.btnMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMin.Image = global::OPP.Properties.Resources.icon_minimizar;
+            this.btnMin.Location = new System.Drawing.Point(840, 7);
+            this.btnMin.Name = "btnMin";
+            this.btnMin.Size = new System.Drawing.Size(20, 20);
+            this.btnMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnMin.TabIndex = 2;
+            this.btnMin.TabStop = false;
+            this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
+            this.btnMin.MouseHover += new System.EventHandler(this.btnMin_MouseHover);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.Image = global::OPP.Properties.Resources.icon_cerrar2;
+            this.btnClose.Location = new System.Drawing.Point(892, 7);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(20, 20);
+            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnClose.TabIndex = 1;
+            this.btnClose.TabStop = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnMenu
+            // 
+            this.btnMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMenu.Image = global::OPP.Properties.Resources.Mobile_Menu_Icon;
+            this.btnMenu.Location = new System.Drawing.Point(6, 7);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(35, 35);
+            this.btnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnMenu.TabIndex = 0;
+            this.btnMenu.TabStop = false;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            // 
+            // pnContent
+            // 
+            this.pnContent.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnContent.Location = new System.Drawing.Point(250, 45);
+            this.pnContent.Name = "pnContent";
+            this.pnContent.Size = new System.Drawing.Size(917, 605);
+            this.pnContent.TabIndex = 2;
+            this.pnContent.SizeChanged += new System.EventHandler(this.pnContent_SizeChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -295,16 +301,17 @@ namespace OPP
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.pnMenuVertical.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnTitle.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnResize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

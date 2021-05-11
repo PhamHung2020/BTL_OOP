@@ -50,7 +50,11 @@ namespace OPP
                 txtChatLieuVachNgan.Text = gianHangTieuChuan.ChatLieuVachNgan;
             }    
         }
-
+        public void Alert(string msg, frmThongBao.alertTypeEnum type)
+        {
+            frmThongBao f = new frmThongBao();
+            f.setAlert(msg, type);
+        }
         private void frmSuaGianHang_Load(object sender, EventArgs e)
         {
 
@@ -58,7 +62,7 @@ namespace OPP
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            if(new frmTinNhan("Bạn thực sự muốn thoát").ShowDialog() == DialogResult.Yes)
+            if(new frmTinNhan("Bạn thực sự muốn thoát?").ShowDialog() == DialogResult.Yes)
             {
                 this.Close();
             }    
@@ -71,48 +75,53 @@ namespace OPP
             {
                 if(new frmTinNhan("Bạn muốn lưu lại thông tin gian hàng?").ShowDialog() == DialogResult.Yes)
                 {
-                    if(rbGianHangCaoCap.Checked == true)
+                    if(rbGianHangCaoCap.Checked == true && txtSoBanGhe.Text != "" && txtSoQuatLamMat.Text != "" && txtDienTich.Text != "")
                     {
                         string viTriGianHang = ((cbTang.SelectedIndex + 1) * 100 + (cbViTri.SelectedIndex + 1)).ToString();
                         string maGianHang = HelperBUS.GenerateMaGianHang<GianHangCaoCapDTO>(viTriGianHang);
                         GianHangCaoCapDTO gianHangCaoCap = new GianHangCaoCapDTO(maGianHang, Double.Parse(txtDienTich.Text), viTriGianHang, false, Int32.Parse(txtSoQuatLamMat.Text), Int32.Parse(txtSoBanGhe.Text));
                         if(GianHangBUS.Instance.CapNhatGianHang(gianHangCaoCap))
                         {
-                            new frmThongBao("Cập nhật gian hàng thành công", 0).Show();
-                            DialogResult = DialogResult.OK;
+                            this.Alert("Cập nhật gian hàng " + maGianHang +  " thành công", frmThongBao.alertTypeEnum.Success);
+                            DialogResult = DialogResult.Yes;
                             this.Close();
                         }
                         else
                         {
-                            new frmThongBao("Cập nhật thất bại", 1).Show();
+                            this.Alert("Cập nhật thất bại", frmThongBao.alertTypeEnum.Error);
                         }
 
-                    } else if(rbGianHangTieuChuan.Checked == true)
+                    } else if(rbGianHangTieuChuan.Checked == true && txtChatLieuVachNgan.Text != "" && txtChatLieuMaiChe.Text != "" && txtDienTich.Text != "")
                     {
                         string viTriGianHang = ((cbTang.SelectedIndex + 1) * 100 + (cbViTri.SelectedIndex + 1)).ToString();
-                        string maGianHang = HelperBUS.GenerateMaGianHang<GianHangCaoCapDTO>(viTriGianHang);
+                        string maGianHang = HelperBUS.GenerateMaGianHang<GianHangTieuChuanDTO>(viTriGianHang);
                         GianHangTieuChuanDTO gianHangTieuChuan = new GianHangTieuChuanDTO(maGianHang, Double.Parse(txtDienTich.Text), viTriGianHang, false, txtChatLieuVachNgan.Text, txtChatLieuMaiChe.Text);
                         if(GianHangBUS.Instance.CapNhatGianHang(gianHangTieuChuan))
                         {
-                            new frmThongBao("Cập nhật gian hàng thành công", 0).Show();
-                            DialogResult = DialogResult.OK;
+                            this.Alert("Cập nhật gian hàng thành công", frmThongBao.alertTypeEnum.Success);
+                            DialogResult = DialogResult.Yes;
                             this.Close();
                         }
                         else
                         {
-                            new frmThongBao("Cập nhật thất bại", 1).Show();
+                            this.Alert("Cập nhật thất bại", frmThongBao.alertTypeEnum.Error);
                         }
                     }
                     else
                     {
-                        new frmThongBao("Chưa điền đủ thông tin", 1).Show();
+                        this.Alert("Chưa điền đủ thông tin", frmThongBao.alertTypeEnum.Warning);
                     }
                 }
             } catch(Exception error)
             {
-                new frmThongBao(error.Message, 1).Show();
+                this.Alert(error.Message, frmThongBao.alertTypeEnum.Error);
             }
             
+        }
+
+        private void guna2HtmlLabel2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

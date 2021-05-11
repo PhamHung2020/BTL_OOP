@@ -196,6 +196,12 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNguoiQuanLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNguoiQuanLy.Designer.cs">
+      <DependentUpon>frmNguoiQuanLy.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmQuanLyGianHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,6 +238,12 @@
     <Compile Include="frmThongKeKhachHang.Designer.cs">
       <DependentUpon>frmThongKeKhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmThongTinChiTietGianHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongTinChiTietGianHang.Designer.cs">
+      <DependentUpon>frmThongTinChiTietGianHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmThongTinKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -267,6 +279,9 @@
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmNguoiQuanLy.resx">
+      <DependentUpon>frmNguoiQuanLy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmQuanLyGianHang.resx">
       <DependentUpon>frmQuanLyGianHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -284,6 +299,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmThongKeKhachHang.resx">
       <DependentUpon>frmThongKeKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThongTinChiTietGianHang.resx">
+      <DependentUpon>frmThongTinChiTietGianHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmThongTinKhachHang.resx">
       <DependentUpon>frmThongTinKhachHang.cs</DependentUpon>
@@ -385,6 +403,15 @@
     <None Include="Resources\177930111_738095100219336_74805604007878888_n.jpg" />
     <None Include="Resources\174761185_760561574650089_311558246407658133_n %281%29.jpg" />
     <None Include="Resources\128276132_751074828924633_6714379802517118051_n.jpg" />
+    <None Include="Resources\Multiply_18px.png" />
+    <None Include="Resources\Checkmark_28px.png" />
+    <None Include="Resources\Multiply_18px1.png" />
+    <None Include="Resources\Multiply_18px2.png" />
+    <None Include="Resources\Checkmark_28px1.png" />
+    <None Include="Resources\Error_28px.png" />
+    <None Include="Resources\Info_28px.png" />
+    <None Include="Resources\Multiply_18px3.png" />
+    <None Include="Resources\Warning_28px.png" />
     <Content Include="TextFile1.txt" />
     <None Include="Resources\close_window_32px.png" />
     <None Include="Resources\checked.png" />

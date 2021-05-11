@@ -120,3 +120,5 @@ C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\OPP\bin\Debug\DAL.pdb
 C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\OPP\obj\Debug\OPP.frmThongBao.resources
 C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\OPP\obj\Debug\OPP.frmTinNhan.resources
 C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\OPP\obj\Debug\OPP.frmQuanLyGianHang.resources
+C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\OPP\obj\Debug\OPP.frmThongTinChiTietGianHang.resources
+C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\OPP\obj\Debug\OPP.frmNguoiQuanLy.resources

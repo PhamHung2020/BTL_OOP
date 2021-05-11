@@ -198,11 +198,12 @@
   </data>
   <data name="tbTongDoanhThu.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAT4AAAAgCAYAAACLkxRvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACmSURBVHhe7dQxDQMxAARB80fll2EERgDkZclNKHhnpGsO
+        iVBORw0KGgoAAAANSUhEUgAAAT4AAAAqCAYAAAAqCDcJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADGSURBVHhe7dQxDQMxAARB80fll2EERgDkZclNKHhnpGsO
         wA6ApLXWZ875MzO7ebt1J3tj7APgdrt1J3vCBzQIH5AjfECO8AE5wgfkCB+QI3xAjvABOcIH5AgfkCN8
-        QI7wATnCB+QIH5AjfECO8AE5wgfkCB+QI3xAjvABOcIH5AgfkCN8QI7wATnCB+QIH5AjfEDOX/ie5/nu
-        w8zs5u3WnewBlIzxAuHJmCj/AH/mAAAAAElFTkSuQmCC
+        QI7wATnCB+QIH5AjfECO8AE5wgfkCB+QI3xAjvABOcIH5AgfkCN8QI7wATnCB+QIH5AjfECO8AE5wgfk
+        CB+QI3xAjvABOcIH5AgfkCN8QI7wATnCB+T8he95nu8+zMxu3m7dyR5AyRgvAna64yVznr8AAAAASUVO
+        RK5CYII=
 </value>
   </data>
   <data name="bunifuLabel1.BaseStylesheet" xml:space="preserve">

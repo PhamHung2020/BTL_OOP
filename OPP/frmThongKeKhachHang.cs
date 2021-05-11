@@ -29,15 +29,15 @@ namespace OPP
         {
             List<KhachHangDTO> khachHangs = new List<KhachHangDTO>();
             khachHangs = KhachHangBUS.Instance.LayDanhSachKhachHang();
-            dataKhachHang.Rows.Add(khachHangs.Count - 1);
+            dataKhachHang.Rows.Add(khachHangs.Count);
             for(int i = 0; i < khachHangs.Count; i++)
             {
                 dataKhachHang.Rows[i].Cells[0].Value = khachHangs[i].MaKhachHang;
                 dataKhachHang.Rows[i].Cells[1].Value = khachHangs[i].Ten;
                 dataKhachHang.Rows[i].Cells[2].Value = khachHangs[i].DiaChi;
                 dataKhachHang.Rows[i].Cells[3].Value = khachHangs[i].MaGianHang;
-                dataKhachHang.Rows[i].Cells[4].Value = khachHangs[i].ThoiGianBatDauThue;
-                dataKhachHang.Rows[i].Cells[5].Value = khachHangs[i].ThoiGianKetThucThue;
+                dataKhachHang.Rows[i].Cells[4].Value = khachHangs[i].ThoiGianBatDauThue.Day + "/" + khachHangs[i].ThoiGianBatDauThue.Month + "/" + khachHangs[i].ThoiGianBatDauThue.Year;
+                dataKhachHang.Rows[i].Cells[5].Value = khachHangs[i].ThoiGianKetThucThue.Day + "/" + khachHangs[i].ThoiGianKetThucThue.Month + "/" + khachHangs[i].ThoiGianKetThucThue.Year;
                 dataKhachHang.Rows[i].Cells[6].Value = khachHangs[i].TienDatCoc;
             }    
         }

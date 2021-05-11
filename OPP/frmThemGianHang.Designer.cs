@@ -32,7 +32,6 @@ namespace OPP
             this.components = new System.ComponentModel.Container();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.tbDienTich = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cbTang = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbViTri = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -50,6 +49,10 @@ namespace OPP
             this.lbSoBanGhe = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtSoBanGhe = new Guna.UI2.WinForms.Guna2TextBox();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2HtmlLabel1
@@ -74,7 +77,8 @@ namespace OPP
             this.tbDienTich.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbDienTich.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbDienTich.FocusedState.Parent = this.tbDienTich;
-            this.tbDienTich.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbDienTich.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDienTich.ForeColor = System.Drawing.Color.Black;
             this.tbDienTich.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbDienTich.HoverState.Parent = this.tbDienTich;
             this.tbDienTich.Location = new System.Drawing.Point(255, 63);
@@ -85,17 +89,6 @@ namespace OPP
             this.tbDienTich.ShadowDecoration.Parent = this.tbDienTich;
             this.tbDienTich.Size = new System.Drawing.Size(342, 36);
             this.tbDienTich.TabIndex = 0;
-            // 
-            // guna2HtmlLabel2
-            // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(189, 12);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(227, 35);
-            this.guna2HtmlLabel2.TabIndex = 9;
-            this.guna2HtmlLabel2.Text = "Thêm gian hàng";
             // 
             // guna2HtmlLabel3
             // 
@@ -116,8 +109,8 @@ namespace OPP
             this.cbTang.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbTang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbTang.FocusedState.Parent = this.cbTang;
-            this.cbTang.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbTang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbTang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTang.ForeColor = System.Drawing.Color.Black;
             this.cbTang.HoverState.Parent = this.cbTang;
             this.cbTang.ItemHeight = 30;
             this.cbTang.Items.AddRange(new object[] {
@@ -130,6 +123,7 @@ namespace OPP
             this.cbTang.Name = "cbTang";
             this.cbTang.ShadowDecoration.Parent = this.cbTang;
             this.cbTang.Size = new System.Drawing.Size(159, 36);
+            this.cbTang.StartIndex = 0;
             this.cbTang.TabIndex = 1;
             // 
             // cbViTri
@@ -140,8 +134,8 @@ namespace OPP
             this.cbViTri.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbViTri.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbViTri.FocusedState.Parent = this.cbViTri;
-            this.cbViTri.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbViTri.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbViTri.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbViTri.ForeColor = System.Drawing.Color.Black;
             this.cbViTri.HoverState.Parent = this.cbViTri;
             this.cbViTri.ItemHeight = 30;
             this.cbViTri.Items.AddRange(new object[] {
@@ -177,6 +171,7 @@ namespace OPP
             this.cbViTri.Name = "cbViTri";
             this.cbViTri.ShadowDecoration.Parent = this.cbViTri;
             this.cbViTri.Size = new System.Drawing.Size(163, 36);
+            this.cbViTri.StartIndex = 0;
             this.cbViTri.TabIndex = 2;
             // 
             // guna2HtmlLabel4
@@ -198,6 +193,7 @@ namespace OPP
             this.rbGianHangTieuChuan.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rbGianHangTieuChuan.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbGianHangTieuChuan.CheckedState.InnerOffset = -4;
+            this.rbGianHangTieuChuan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbGianHangTieuChuan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbGianHangTieuChuan.Location = new System.Drawing.Point(251, 147);
             this.rbGianHangTieuChuan.Name = "rbGianHangTieuChuan";
@@ -218,6 +214,7 @@ namespace OPP
             this.rbGianHangCaoCap.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rbGianHangCaoCap.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbGianHangCaoCap.CheckedState.InnerOffset = -4;
+            this.rbGianHangCaoCap.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbGianHangCaoCap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.rbGianHangCaoCap.Location = new System.Drawing.Point(436, 147);
             this.rbGianHangCaoCap.Name = "rbGianHangCaoCap";
@@ -252,7 +249,8 @@ namespace OPP
             this.txtChatLieuMaiChe.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtChatLieuMaiChe.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtChatLieuMaiChe.FocusedState.Parent = this.txtChatLieuMaiChe;
-            this.txtChatLieuMaiChe.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtChatLieuMaiChe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtChatLieuMaiChe.ForeColor = System.Drawing.Color.Black;
             this.txtChatLieuMaiChe.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtChatLieuMaiChe.HoverState.Parent = this.txtChatLieuMaiChe;
             this.txtChatLieuMaiChe.Location = new System.Drawing.Point(255, 199);
@@ -275,7 +273,8 @@ namespace OPP
             this.txtChatLieuVachNgan.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtChatLieuVachNgan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtChatLieuVachNgan.FocusedState.Parent = this.txtChatLieuVachNgan;
-            this.txtChatLieuVachNgan.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtChatLieuVachNgan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtChatLieuVachNgan.ForeColor = System.Drawing.Color.Black;
             this.txtChatLieuVachNgan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtChatLieuVachNgan.HoverState.Parent = this.txtChatLieuVachNgan;
             this.txtChatLieuVachNgan.Location = new System.Drawing.Point(255, 241);
@@ -301,6 +300,7 @@ namespace OPP
             // btnThem
             // 
             this.btnThem.CheckedState.Parent = this.btnThem;
+            this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThem.CustomImages.Parent = this.btnThem;
             this.btnThem.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.White;
@@ -316,6 +316,7 @@ namespace OPP
             // btnDong
             // 
             this.btnDong.CheckedState.Parent = this.btnDong;
+            this.btnDong.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDong.CustomImages.Parent = this.btnDong;
             this.btnDong.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDong.ForeColor = System.Drawing.Color.White;
@@ -350,7 +351,8 @@ namespace OPP
             this.txtSoQuatLamMat.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSoQuatLamMat.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSoQuatLamMat.FocusedState.Parent = this.txtSoQuatLamMat;
-            this.txtSoQuatLamMat.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSoQuatLamMat.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtSoQuatLamMat.ForeColor = System.Drawing.Color.Black;
             this.txtSoQuatLamMat.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSoQuatLamMat.HoverState.Parent = this.txtSoQuatLamMat;
             this.txtSoQuatLamMat.Location = new System.Drawing.Point(255, 199);
@@ -384,7 +386,8 @@ namespace OPP
             this.txtSoBanGhe.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSoBanGhe.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSoBanGhe.FocusedState.Parent = this.txtSoBanGhe;
-            this.txtSoBanGhe.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSoBanGhe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoBanGhe.ForeColor = System.Drawing.Color.Black;
             this.txtSoBanGhe.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSoBanGhe.HoverState.Parent = this.txtSoBanGhe;
             this.txtSoBanGhe.Location = new System.Drawing.Point(255, 241);
@@ -400,8 +403,38 @@ namespace OPP
             // 
             this.bunifuDragControl1.Fixed = true;
             this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this;
+            this.bunifuDragControl1.TargetControl = this.panel1;
             this.bunifuDragControl1.Vertical = true;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.panel1.Controls.Add(this.guna2HtmlLabel2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(637, 57);
+            this.panel1.TabIndex = 15;
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.White;
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(203, 12);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(227, 35);
+            this.guna2HtmlLabel2.TabIndex = 10;
+            this.guna2HtmlLabel2.Text = "Thêm gian hàng";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 427);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(637, 12);
+            this.panel2.TabIndex = 16;
             // 
             // frmThemGianHang
             // 
@@ -409,6 +442,8 @@ namespace OPP
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(637, 439);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtSoBanGhe);
             this.Controls.Add(this.lbSoBanGhe);
             this.Controls.Add(this.txtSoQuatLamMat);
@@ -425,7 +460,6 @@ namespace OPP
             this.Controls.Add(this.cbViTri);
             this.Controls.Add(this.cbTang);
             this.Controls.Add(this.guna2HtmlLabel3);
-            this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.tbDienTich);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -433,6 +467,8 @@ namespace OPP
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmThemGianHang";
             this.Load += new System.EventHandler(this.frmThemGianHang_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -441,7 +477,6 @@ namespace OPP
         #endregion
 
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2RadioButton rbGianHangTieuChuan;
@@ -460,5 +495,8 @@ namespace OPP
         public Guna.UI2.WinForms.Guna2TextBox txtSoQuatLamMat;
         public Guna.UI2.WinForms.Guna2TextBox txtSoBanGhe;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
     }
 }

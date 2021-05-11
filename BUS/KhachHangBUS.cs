@@ -60,12 +60,14 @@ namespace BUS
             foreach (var khachHang in _context.DsKhachHang)
             {
                 if (khachHangMoi.MaGianHang == khachHang.MaGianHang &&
-                   (khachHang.ThoiGianBatDauThue.Date <= khachHangMoi.ThoiGianKetThucThue.Date &&
-                    khachHang.ThoiGianKetThucThue.Date >= khachHangMoi.ThoiGianKetThucThue.Date) ||
-                   (khachHang.ThoiGianBatDauThue.Date <= khachHangMoi.ThoiGianBatDauThue.Date &&
-                    khachHang.ThoiGianKetThucThue.Date >= khachHangMoi.ThoiGianBatDauThue.Date))
+                   ((khachHangMoi.ThoiGianBatDauThue.Date <= khachHang.ThoiGianBatDauThue.Date &&
+                    khachHangMoi.ThoiGianKetThucThue.Date >= khachHang.ThoiGianKetThucThue.Date) ||
+                   (khachHangMoi.ThoiGianBatDauThue.Date >= khachHang.ThoiGianBatDauThue.Date &&
+                    khachHangMoi.ThoiGianBatDauThue.Date <= khachHang.ThoiGianKetThucThue.Date) ||
+                   (khachHangMoi.ThoiGianKetThucThue.Date >= khachHang.ThoiGianBatDauThue.Date &&
+                    khachHangMoi.ThoiGianKetThucThue.Date <= khachHang.ThoiGianKetThucThue.Date)))
                 {
-                    throw new Exception($"Gian hàng {khachHangMoi.MaGianHang} đang được thuê bởi khách hàng {khachHang.MaKhachHang} từ {khachHang.ThoiGianBatDauThue.ToString()} đến {khachHang.ThoiGianKetThucThue.ToString()}");
+                    throw new Exception($"Gian hàng {khachHangMoi.MaGianHang} đang được thuê");
                 }
             }
             _context.DsKhachHang.Add(khachHangMoi);

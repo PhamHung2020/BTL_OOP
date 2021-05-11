@@ -66,7 +66,11 @@ namespace OPP
                 txtPass.UseSystemPasswordChar = true;
             }    
         }
-
+        public void Alert(string msg, frmThongBao.alertTypeEnum type)
+        {
+            frmThongBao f = new frmThongBao();
+            f.setAlert(msg, type);
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             TaiKhoanKhachHangBUS taiKhoanKhachHangBUS = TaiKhoanKhachHangBUS.getInstance();
@@ -79,7 +83,7 @@ namespace OPP
             }
             else
             {
-                MessageBox.Show("Check your username and password", "Thông báo", MessageBoxButtons.OK);
+                this.Alert("Thông tin đăng nhập chưa chính xác", frmThongBao.alertTypeEnum.Error);
                 this.Show();
             }    
 

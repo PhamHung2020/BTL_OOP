@@ -33,10 +33,25 @@ namespace OPP
             tbTongDoanhThu.Text = KhuTrungBayBUS.Instance.DoanhThu(new DateTime(2020,1,1,0,0,0), DateTime.Now).ToString();
             
         }
-
+        public void Alert(string msg, frmThongBao.alertTypeEnum type)
+        {
+            frmThongBao f = new frmThongBao();
+            f.setAlert(msg, type);
+        }
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
-            tbDoanhThu.Text = KhuTrungBayBUS.Instance.DoanhThu(DateTime.Parse(dtpBatDau.Text), DateTime.Parse(dtpKetThuc.Text)).ToString();
+            if(dtpBatDau.Text == dtpKetThuc.Text || dtpBatDau.Value < dtpKetThuc.Value)
+                tbDoanhThu.Text = KhuTrungBayBUS.Instance.DoanhThu(DateTime.Parse(dtpBatDau.Text), DateTime.Parse(dtpKetThuc.Text)).ToString();
+            else
+            {
+                this.Alert("Thời gian không hợp lệ", frmThongBao.alertTypeEnum.Warning);
+                tbDoanhThu.Text = "0";
+            }    
+        }
+
+        private void frmThongKeDoanhThu_Resize(object sender, EventArgs e)
+        {
+            
         }
     }
 }

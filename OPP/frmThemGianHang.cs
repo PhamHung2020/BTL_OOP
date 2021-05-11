@@ -20,7 +20,11 @@ namespace OPP
         {
             InitializeComponent();
         }
-
+        public void Alert(string msg, frmThongBao.alertTypeEnum type)
+        {
+            frmThongBao f = new frmThongBao();
+            f.setAlert(msg, type);
+        }
         private void frmThemGianHang_Load(object sender, EventArgs e)
         {
             lbChatLieuMaiChe.Hide();
@@ -75,47 +79,47 @@ namespace OPP
         {
             try
             {
-                if(rbGianHangCaoCap.Checked == true)
+                if(rbGianHangCaoCap.Checked == true && txtSoBanGhe.Text != "" && txtSoQuatLamMat.Text != "" && tbDienTich.Text != "")
                 {
                     string viTriGianHang = ((cbTang.SelectedIndex + 1) * 100 + (cbViTri.SelectedIndex + 1)).ToString();
                     string maGianHang = HelperBUS.GenerateMaGianHang<GianHangCaoCapDTO>(viTriGianHang);
                     gianHangCaoCap = new GianHangCaoCapDTO(maGianHang, Double.Parse(tbDienTich.Text), viTriGianHang, false, Int32.Parse(txtSoQuatLamMat.Text), Int32.Parse(txtSoBanGhe.Text));
                     if(GianHangBUS.Instance.ThemGianHang(gianHangCaoCap))
                     {
-                        new frmThongBao("Thêm gian hàng thành công", 0).Show();
+                        this.Alert("Thêm gian hàng thành công", frmThongBao.alertTypeEnum.Success);
                         DialogResult = DialogResult.OK;
                         this.Close();
                     }
                     else
                     {
-                        new frmThongBao("Thêm thất bại", 1).Show();
+                        this.Alert("Thêm thất bại", frmThongBao.alertTypeEnum.Error);
                     }
 
 
                 }
-                else if(rbGianHangTieuChuan.Checked == true)
+                else if(rbGianHangTieuChuan.Checked == true && tbDienTich.Text != "" && txtChatLieuMaiChe.Text != "" && txtChatLieuVachNgan.Text != "")
                 {
                     string viTriGianHang = ((cbTang.SelectedIndex + 1) * 100 + (cbViTri.SelectedIndex + 1)).ToString();
                     string maGianHang = HelperBUS.GenerateMaGianHang<GianHangTieuChuanDTO>(viTriGianHang);
                     gianHangTieuChuan = new GianHangTieuChuanDTO(maGianHang, Double.Parse(tbDienTich.Text), viTriGianHang, false, txtChatLieuVachNgan.Text, txtChatLieuMaiChe.Text);
                     if(GianHangBUS.Instance.ThemGianHang(gianHangTieuChuan))
                     {
-                        new frmThongBao("Thêm gian hàng thành công", 0).Show();
+                        this.Alert("Thêm gian hàng thành công", frmThongBao.alertTypeEnum.Success);
                         DialogResult = DialogResult.OK;
                         this.Close();
                     }
                     else
                     {
-                        new frmThongBao("Thêm thất bại", 1).Show();
+                        this.Alert("Thêm thất bại", frmThongBao.alertTypeEnum.Error);
                     }
                 }
                 else
                 {
-                    new frmThongBao("Chưa điền đủ thông tin", 1).Show();
+                    this.Alert("Chưa điền đủ thông tin", frmThongBao.alertTypeEnum.Warning);
                 }    
             } catch(Exception erorr)
             {
-                new frmThongBao(erorr.Message, 1).Show();
+                this.Alert(erorr.Message, frmThongBao.alertTypeEnum.Error);
             }
             
             
