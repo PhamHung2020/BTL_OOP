@@ -270,9 +270,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TaiKhoanKhachHangDTO.cs" />
-    <Compile Include="TaiKhoanKhachHangBUS.cs" />
-    <Compile Include="TaiKhoanKhachHangDAL.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -412,7 +409,6 @@
     <None Include="Resources\Info_28px.png" />
     <None Include="Resources\Multiply_18px3.png" />
     <None Include="Resources\Warning_28px.png" />
-    <Content Include="TextFile1.txt" />
     <None Include="Resources\close_window_32px.png" />
     <None Include="Resources\checked.png" />
     <None Include="Resources\check.png" />

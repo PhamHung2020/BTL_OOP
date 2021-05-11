@@ -79,13 +79,13 @@ namespace OPP
                 this.Hide();
                 Form1 form1 = new Form1();
                 form1.Show();
-                    
+
             }
             else
             {
                 this.Alert("Thông tin đăng nhập chưa chính xác", frmThongBao.alertTypeEnum.Error);
                 this.Show();
-            }    
+            }
 
 
         }

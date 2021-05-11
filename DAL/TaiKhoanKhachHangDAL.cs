@@ -3,36 +3,35 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DTO;
 
-
-namespace OPP
+namespace DAL
 {
     public class TaiKhoanKhachHangDAL
     {
-        private List<TaiKhoanKhachHang> taiKhoanKhachHangs = new List<TaiKhoanKhachHang>();
+        private List<TaiKhoanDTO> taiKhoanKhachHangs = new List<TaiKhoanDTO>();
         public TaiKhoanKhachHangDAL()
         {
             taiKhoanKhachHangs.Add(
-                new TaiKhoanKhachHang("nh3", "123456")
+                new TaiKhoanDTO("nh3", "123456")
                 );
             taiKhoanKhachHangs.Add(
-               new TaiKhoanKhachHang("nang.lt194339", "123456")
+               new TaiKhoanDTO("nang.lt194339", "123456")
 
                );
             taiKhoanKhachHangs.Add(
-               new TaiKhoanKhachHang("hung.pm", "123456")
+               new TaiKhoanDTO("hung.pm", "123456")
 
                );
             taiKhoanKhachHangs.Add(
-               new TaiKhoanKhachHang("tien.dd", "123456")
+               new TaiKhoanDTO("tien.dd", "123456")
 
                );
 
         }
-        public List<TaiKhoanKhachHang> TaiKhoanKhachHangs {
+        public List<TaiKhoanDTO> TaiKhoanKhachHangs
+        {
             get { return this.taiKhoanKhachHangs; }
         }
-        
-
     }
 }

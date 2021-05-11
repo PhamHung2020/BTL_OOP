@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DAL;
 
-namespace OPP
+namespace BUS
 {
     public class TaiKhoanKhachHangBUS
     {
@@ -12,7 +13,7 @@ namespace OPP
         private TaiKhoanKhachHangBUS() { }
         public static TaiKhoanKhachHangBUS getInstance()
         {
-            if(_instance == null)
+            if (_instance == null)
             {
                 _instance = new TaiKhoanKhachHangBUS();
             }
@@ -22,9 +23,9 @@ namespace OPP
         {
             bool check = false;
             TaiKhoanKhachHangDAL taiKhoanKhachHangDAL = new TaiKhoanKhachHangDAL();
-            foreach(var i in taiKhoanKhachHangDAL.TaiKhoanKhachHangs)
+            foreach (var i in taiKhoanKhachHangDAL.TaiKhoanKhachHangs)
             {
-                if(i.Email == email && i.Password == password)
+                if (i.Email == email && i.PassWord == password)
                 {
                     check = true;
                 }
