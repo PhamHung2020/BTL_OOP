@@ -434,18 +434,27 @@ namespace OPP
                     maGianHang = dataGianHangCC.SelectedRows[0].Cells[0].Value.ToString();
                 else
                     maGianHang = dataGianHangTC.SelectedRows[0].Cells[0].Value.ToString();
-
-                if(new frmTinNhan("Bạn có chắc muốn xóa gian hàng có mã: " + maGianHang + "?").ShowDialog() == DialogResult.Yes)
+                GianHangDTO gianHang = qlGianHang.TimKiemTheoMaGianHang<GianHangDTO>(maGianHang)[0];
+                if(gianHang.TinhTrangThue == true)
                 {
-                    if(qlGianHang.XoaGianHang(maGianHang))
+                    this.Alert("Gian hàng đang được thuê. Xóa không thành công", frmThongBao.alertTypeEnum.Error);
+                }
+                else
+                {
+                    if(new frmTinNhan("Bạn có chắc muốn xóa gian hàng có mã: " + maGianHang + "?").ShowDialog() == DialogResult.Yes)
                     {
-                        this.Alert("Xóa gian hàng thành công!", frmThongBao.alertTypeEnum.Success);
-                        CapNhap();
-                    } else
-                    {
-                        this.Alert("Xóa thất bại!", frmThongBao.alertTypeEnum.Error);
-                    }    
+                        if(qlGianHang.XoaGianHang(maGianHang))
+                        {
+                            this.Alert("Xóa gian hàng thành công!", frmThongBao.alertTypeEnum.Success);
+                            CapNhap();
+                        }
+                        else
+                        {
+                            this.Alert("Xóa thất bại!", frmThongBao.alertTypeEnum.Error);
+                        }
+                    }
                 }    
+                
             } catch(Exception erorr)
             {
                 this.Alert(erorr.Message, frmThongBao.alertTypeEnum.Error);
@@ -508,6 +517,19 @@ namespace OPP
         private void dataGianHangTC_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)
         {
             
+        }
+
+        private void dataGianHangCC_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtTimKiem_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                guna2Button4.PerformClick();
+            }    
         }
     }
 }

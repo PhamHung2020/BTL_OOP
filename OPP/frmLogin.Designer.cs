@@ -255,6 +255,7 @@ namespace OPP
             this.txtPass.UseSystemPasswordChar = true;
             this.txtPass.Click += new System.EventHandler(this.txtPass_Click);
             this.txtPass.Enter += new System.EventHandler(this.txtPass_Enter);
+            this.txtPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPass_KeyDown);
             this.txtPass.Leave += new System.EventHandler(this.txtPass_Leave);
             // 
             // pictureBox3
@@ -291,6 +292,7 @@ namespace OPP
             this.txtUserName.Text = "User name";
             this.txtUserName.Click += new System.EventHandler(this.txtUserName_Click);
             this.txtUserName.Enter += new System.EventHandler(this.txtUserName_Enter);
+            this.txtUserName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUserName_KeyDown);
             this.txtUserName.Leave += new System.EventHandler(this.txtUserName_Leave);
             // 
             // pictureBox2
@@ -337,10 +339,11 @@ namespace OPP
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

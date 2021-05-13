@@ -83,6 +83,7 @@ namespace OPP
             this.txtSoBanGhe.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSoBanGhe.HoverState.Parent = this.txtSoBanGhe;
             this.txtSoBanGhe.Location = new System.Drawing.Point(248, 242);
+            this.txtSoBanGhe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSoBanGhe.Name = "txtSoBanGhe";
             this.txtSoBanGhe.PasswordChar = '\0';
             this.txtSoBanGhe.PlaceholderText = "";
@@ -118,6 +119,7 @@ namespace OPP
             this.txtSoQuatLamMat.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSoQuatLamMat.HoverState.Parent = this.txtSoQuatLamMat;
             this.txtSoQuatLamMat.Location = new System.Drawing.Point(248, 200);
+            this.txtSoQuatLamMat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSoQuatLamMat.Name = "txtSoQuatLamMat";
             this.txtSoQuatLamMat.PasswordChar = '\0';
             this.txtSoQuatLamMat.PlaceholderText = "";
@@ -149,7 +151,7 @@ namespace OPP
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(180, 45);
-            this.guna2Button1.TabIndex = 27;
+            this.guna2Button1.TabIndex = 3;
             this.guna2Button1.Text = "Lưu";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
@@ -304,13 +306,14 @@ namespace OPP
             this.txtDienTich.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDienTich.HoverState.Parent = this.txtDienTich;
             this.txtDienTich.Location = new System.Drawing.Point(248, 64);
+            this.txtDienTich.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDienTich.Name = "txtDienTich";
             this.txtDienTich.PasswordChar = '\0';
             this.txtDienTich.PlaceholderText = "";
             this.txtDienTich.SelectedText = "";
             this.txtDienTich.ShadowDecoration.Parent = this.txtDienTich;
             this.txtDienTich.Size = new System.Drawing.Size(342, 36);
-            this.txtDienTich.TabIndex = 20;
+            this.txtDienTich.TabIndex = 0;
             // 
             // guna2HtmlLabel1
             // 
@@ -335,7 +338,7 @@ namespace OPP
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
             this.guna2Button2.Size = new System.Drawing.Size(180, 45);
-            this.guna2Button2.TabIndex = 32;
+            this.guna2Button2.TabIndex = 4;
             this.guna2Button2.Text = "Đóng";
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
@@ -377,13 +380,14 @@ namespace OPP
             this.txtChatLieuVachNgan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtChatLieuVachNgan.HoverState.Parent = this.txtChatLieuVachNgan;
             this.txtChatLieuVachNgan.Location = new System.Drawing.Point(248, 242);
+            this.txtChatLieuVachNgan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtChatLieuVachNgan.Name = "txtChatLieuVachNgan";
             this.txtChatLieuVachNgan.PasswordChar = '\0';
             this.txtChatLieuVachNgan.PlaceholderText = "";
             this.txtChatLieuVachNgan.SelectedText = "";
             this.txtChatLieuVachNgan.ShadowDecoration.Parent = this.txtChatLieuVachNgan;
             this.txtChatLieuVachNgan.Size = new System.Drawing.Size(342, 36);
-            this.txtChatLieuVachNgan.TabIndex = 36;
+            this.txtChatLieuVachNgan.TabIndex = 2;
             // 
             // txtChatLieuMaiChe
             // 
@@ -401,13 +405,14 @@ namespace OPP
             this.txtChatLieuMaiChe.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtChatLieuMaiChe.HoverState.Parent = this.txtChatLieuMaiChe;
             this.txtChatLieuMaiChe.Location = new System.Drawing.Point(248, 200);
+            this.txtChatLieuMaiChe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtChatLieuMaiChe.Name = "txtChatLieuMaiChe";
             this.txtChatLieuMaiChe.PasswordChar = '\0';
             this.txtChatLieuMaiChe.PlaceholderText = "";
             this.txtChatLieuMaiChe.SelectedText = "";
             this.txtChatLieuMaiChe.ShadowDecoration.Parent = this.txtChatLieuMaiChe;
             this.txtChatLieuMaiChe.Size = new System.Drawing.Size(342, 36);
-            this.txtChatLieuMaiChe.TabIndex = 35;
+            this.txtChatLieuMaiChe.TabIndex = 1;
             // 
             // bunifuDragControl1
             // 

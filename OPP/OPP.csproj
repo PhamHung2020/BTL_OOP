@@ -390,13 +390,6 @@
     <None Include="Resources\empleados1.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database1.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Database1_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Database1.mdf</DependentUpon>
-    </Content>
     <None Include="Resources\177930111_738095100219336_74805604007878888_n.jpg" />
     <None Include="Resources\174761185_760561574650089_311558246407658133_n %281%29.jpg" />
     <None Include="Resources\128276132_751074828924633_6714379802517118051_n.jpg" />

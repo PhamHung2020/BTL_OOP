@@ -115,5 +115,26 @@ namespace OPP
                 txtPass.UseSystemPasswordChar = false;
             }    
         }
+
+        private void txtUserName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                button1.PerformClick();
+            }    
+        }
+
+        private void txtPass_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                button1.PerformClick();
+            }    
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            this.ActiveControl = txtUserName;
+        }
     }
 }

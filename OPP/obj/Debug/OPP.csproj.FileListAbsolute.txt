@@ -12,8 +12,6 @@ C:\Users\nangb\Desktop\OOP\OPP\OPP\obj\Debug\OPP.frmStatistical.resources
 C:\Users\nangb\Desktop\OOP\OPP\OPP\obj\Debug\OPP.frmLogin.resources
 C:\Users\nangb\Desktop\OOP\OPP\OPP\bin\Debug\Database1.mdf
 C:\Users\nangb\Desktop\OOP\OPP\OPP\bin\Debug\Database1_log.ldf
-C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\OPP\bin\Debug\Database1.mdf
-C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\OPP\bin\Debug\Database1_log.ldf
 C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\OPP\bin\Debug\OPP.exe.config
 C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\OPP\bin\Debug\OPP.exe
 C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\OPP\bin\Debug\OPP.pdb
