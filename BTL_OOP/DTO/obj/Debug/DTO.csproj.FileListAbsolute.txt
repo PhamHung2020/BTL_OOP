@@ -15,3 +15,9 @@ E:\20202\OOP\OPP\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
 E:\20202\OOP\OPP\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 E:\20202\OOP\OPP\DTO\obj\Debug\DTO.dll
 E:\20202\OOP\OPP\DTO\obj\Debug\DTO.pdb
+E:\New folder\BTL_OOP\BTL_OOP\DTO\bin\Debug\DTO.dll
+E:\New folder\BTL_OOP\BTL_OOP\DTO\bin\Debug\DTO.pdb
+E:\New folder\BTL_OOP\BTL_OOP\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+E:\New folder\BTL_OOP\BTL_OOP\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+E:\New folder\BTL_OOP\BTL_OOP\DTO\obj\Debug\DTO.dll
+E:\New folder\BTL_OOP\BTL_OOP\DTO\obj\Debug\DTO.pdb

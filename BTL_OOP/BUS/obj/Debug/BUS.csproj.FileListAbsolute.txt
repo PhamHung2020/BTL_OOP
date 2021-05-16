@@ -31,3 +31,14 @@ E:\20202\OOP\OPP\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
 E:\20202\OOP\OPP\BUS\obj\Debug\BUS.csproj.CopyComplete
 E:\20202\OOP\OPP\BUS\obj\Debug\BUS.dll
 E:\20202\OOP\OPP\BUS\obj\Debug\BUS.pdb
+E:\New folder\BTL_OOP\BTL_OOP\BUS\bin\Debug\BUS.dll
+E:\New folder\BTL_OOP\BTL_OOP\BUS\bin\Debug\BUS.pdb
+E:\New folder\BTL_OOP\BTL_OOP\BUS\bin\Debug\DAL.dll
+E:\New folder\BTL_OOP\BTL_OOP\BUS\bin\Debug\DTO.dll
+E:\New folder\BTL_OOP\BTL_OOP\BUS\bin\Debug\DAL.pdb
+E:\New folder\BTL_OOP\BTL_OOP\BUS\bin\Debug\DTO.pdb
+E:\New folder\BTL_OOP\BTL_OOP\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+E:\New folder\BTL_OOP\BTL_OOP\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+E:\New folder\BTL_OOP\BTL_OOP\BUS\obj\Debug\BUS.csproj.CopyComplete
+E:\New folder\BTL_OOP\BTL_OOP\BUS\obj\Debug\BUS.dll
+E:\New folder\BTL_OOP\BTL_OOP\BUS\obj\Debug\BUS.pdb
