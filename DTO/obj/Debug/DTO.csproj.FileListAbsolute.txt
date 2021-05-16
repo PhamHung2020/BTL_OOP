@@ -9,3 +9,9 @@ C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\DTO\bin\Debug\DTO.pdb
 C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\DTO\obj\Debug\DTO.dll
 C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\DTO\obj\Debug\DTO.pdb
+E:\20202\OOP\OPP\DTO\bin\Debug\DTO.dll
+E:\20202\OOP\OPP\DTO\bin\Debug\DTO.pdb
+E:\20202\OOP\OPP\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+E:\20202\OOP\OPP\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+E:\20202\OOP\OPP\DTO\obj\Debug\DTO.dll
+E:\20202\OOP\OPP\DTO\obj\Debug\DTO.pdb

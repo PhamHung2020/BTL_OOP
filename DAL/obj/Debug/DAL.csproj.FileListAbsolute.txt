@@ -16,3 +16,12 @@ C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\DAL\obj\Debug\DAL.csproj.CoreCompileI
 C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\DAL\obj\Debug\DAL.dll
 C:\Users\nangb\OneDrive\Máy tính\OOP\OPP\DAL\obj\Debug\DAL.pdb
+E:\20202\OOP\OPP\DAL\bin\Debug\DAL.dll
+E:\20202\OOP\OPP\DAL\bin\Debug\DAL.pdb
+E:\20202\OOP\OPP\DAL\bin\Debug\DTO.dll
+E:\20202\OOP\OPP\DAL\bin\Debug\DTO.pdb
+E:\20202\OOP\OPP\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+E:\20202\OOP\OPP\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\20202\OOP\OPP\DAL\obj\Debug\DAL.csproj.CopyComplete
+E:\20202\OOP\OPP\DAL\obj\Debug\DAL.dll
+E:\20202\OOP\OPP\DAL\obj\Debug\DAL.pdb
