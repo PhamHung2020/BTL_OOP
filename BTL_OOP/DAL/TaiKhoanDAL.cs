@@ -1,16 +1,16 @@
-﻿using System;
+﻿// LE TON NANG - 20194339
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DTO;
 
 namespace DAL
 {
-    public class TaiKhoanKhachHangDAL
+    public class TaiKhoanDAL
     {
         private List<TaiKhoanDTO> taiKhoanKhachHangs = new List<TaiKhoanDTO>();
-        public TaiKhoanKhachHangDAL()
+        /// <summary>
+        /// Danh sách tài khoản khách hàng có sẵn
+        /// </summary>
+        public TaiKhoanDAL()
         {
             taiKhoanKhachHangs.Add(
                 new TaiKhoanDTO("nh3", "123456")
@@ -29,6 +29,9 @@ namespace DAL
                );
 
         }
+        /// <summary>
+        /// Phương thức trả về list tài khoản khách hàng
+        /// </summary>
         public List<TaiKhoanDTO> TaiKhoanKhachHangs
         {
             get { return this.taiKhoanKhachHangs; }

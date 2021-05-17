@@ -1,15 +1,10 @@
-﻿using System;
+﻿// LE TON NANG - 20194339
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
 using BUS;
-using Bunifu.UI.WinForms;
 
 namespace OPP
 {
@@ -26,26 +21,7 @@ namespace OPP
         }
 
         private void frmStatistical_Load(object sender, EventArgs e)
-        {
-            //List<GianHangCaoCapDTO> caoCapDTOs = new List<GianHangCaoCapDTO>();
-            //caoCapDTOs.Add(new GianHangCaoCapDTO("TC101", 5.0, "Tầng 1-101", true, 10, 12));
-            //caoCapDTOs.Add(new GianHangCaoCapDTO("TC102", 5.0, "Tầng 1-102", true, 10, 12));
-            //List<GianHangTieuChuanDTO> tieuChuanDTOs = new List<GianHangTieuChuanDTO>();
-            //tieuChuanDTOs.Add(new GianHangTieuChuanDTO("TC203", 10, "Tầng 2-203", false, "Bê tông", "Nhựa"));
-            //dataGianHang.Rows.Add(tieuChuanDTOs.Count + caoCapDTOs.Count);
-            //int count;
-            //for(count = 0; count < tieuChuanDTOs.Count; count++)
-            //{
-            //    _AddGianHangTieuChuan(tieuChuanDTOs[count], count);
-
-            //}
-            //for(count = tieuChuanDTOs.Count; count < tieuChuanDTOs.Count + caoCapDTOs.Count; count++)
-            //{
-            //    _AddGianHangCaoCap(caoCapDTOs[count - tieuChuanDTOs.Count], count);
-
-            //}
-            //_ChangeColor();
-
+        { 
             CapNhap();
             dataGianHang.Visible = true;
             dataGianHangCC.Visible = false;
@@ -116,8 +92,6 @@ namespace OPP
             else
             {
                 bool LoaiGianHang = dataGianHang.SelectedRows[0].Cells[3].Value == "Gian hàng tiêu chuẩn";
-                //GianHangCaoCapDTO gianHangCaoCap = qlGianHang.TimKiemTheoMaGianHang<GianHangCaoCapDTO>(dataGianHang.SelectedRows[0].Cells[0].Value.ToString())[0];
-                //GianHangTieuChuanDTO gianHangTieuChuan = qlGianHang.TimKiemTheoMaGianHang<GianHangTieuChuanDTO>(dataGianHang.SelectedRows[0].Cells[0].Value.ToString())[0];
                 if(LoaiGianHang == false)
                 {
                     GianHangCaoCapDTO gianHangCaoCap = qlGianHang.TimKiemTheoMaGianHang<GianHangCaoCapDTO>(dataGianHang.SelectedRows[0].Cells[0].Value.ToString())[0];

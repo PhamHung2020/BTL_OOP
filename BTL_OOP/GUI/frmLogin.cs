@@ -1,15 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿// LE TON NANG - 20194339
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Drawing;
-using System.Data.SqlClient;
-using DTO;
 using BUS;
 
 namespace OPP
@@ -73,7 +65,7 @@ namespace OPP
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            TaiKhoanKhachHangBUS taiKhoanKhachHangBUS = TaiKhoanKhachHangBUS.getInstance();
+            TaiKhoanBUS taiKhoanKhachHangBUS = TaiKhoanBUS.getInstance();
             if(taiKhoanKhachHangBUS.Check(txtUserName.Text, txtPass.Text))
             {
                 this.Hide();

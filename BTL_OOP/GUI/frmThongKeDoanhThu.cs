@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// LE TON NANG - 20194339
+using System;
 using System.Windows.Forms;
-using DTO;
 using BUS;
 
 namespace OPP
