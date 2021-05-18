@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{AAB6A9F8-A63A-4843-9D24-01BB9E84BA6C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>OPP</RootNamespace>
-    <AssemblyName>OPP</AssemblyName>
+    <RootNamespace>GUI</RootNamespace>
+    <AssemblyName>GUI</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

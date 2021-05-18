@@ -3,7 +3,7 @@ using System;
 using System.Windows.Forms;
 using BUS;
 
-namespace OPP
+namespace GUI
 {
     public partial class frmThongKeDoanhThu : Form
     {

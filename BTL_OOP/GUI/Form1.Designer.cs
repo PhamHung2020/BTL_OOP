@@ -1,5 +1,5 @@
 ﻿
-namespace OPP
+namespace GUI
 {
     partial class Form1
     {
@@ -100,7 +100,7 @@ namespace OPP
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::OPP.Properties.Resources.hashtag;
+            this.pictureBox1.Image = global::GUI.Properties.Resources.hashtag;
             this.pictureBox1.Location = new System.Drawing.Point(2, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
@@ -118,7 +118,7 @@ namespace OPP
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = global::OPP.Properties.Resources.empleados;
+            this.button3.Image = global::GUI.Properties.Resources.empleados;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(0, 300);
             this.button3.Name = "button3";
@@ -136,7 +136,7 @@ namespace OPP
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::OPP.Properties.Resources.pagos;
+            this.button2.Image = global::GUI.Properties.Resources.pagos;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(0, 254);
             this.button2.Name = "button2";
@@ -154,7 +154,7 @@ namespace OPP
             this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInfo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInfo.ForeColor = System.Drawing.Color.White;
-            this.btnInfo.Image = global::OPP.Properties.Resources.clientes;
+            this.btnInfo.Image = global::GUI.Properties.Resources.clientes;
             this.btnInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInfo.Location = new System.Drawing.Point(0, 208);
             this.btnInfo.Name = "btnInfo";
@@ -172,7 +172,7 @@ namespace OPP
             this.btnDetail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDetail.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDetail.ForeColor = System.Drawing.Color.White;
-            this.btnDetail.Image = global::OPP.Properties.Resources.reportes;
+            this.btnDetail.Image = global::GUI.Properties.Resources.reportes;
             this.btnDetail.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDetail.Location = new System.Drawing.Point(0, 162);
             this.btnDetail.Name = "btnDetail";
@@ -190,7 +190,7 @@ namespace OPP
             this.btnStatistical.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStatistical.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStatistical.ForeColor = System.Drawing.Color.White;
-            this.btnStatistical.Image = global::OPP.Properties.Resources.producto;
+            this.btnStatistical.Image = global::GUI.Properties.Resources.producto;
             this.btnStatistical.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStatistical.Location = new System.Drawing.Point(0, 116);
             this.btnStatistical.Name = "btnStatistical";
@@ -219,7 +219,7 @@ namespace OPP
             // 
             this.btnMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMax.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMax.Image = global::OPP.Properties.Resources.icon_restaurar;
+            this.btnMax.Image = global::GUI.Properties.Resources.icon_restaurar;
             this.btnMax.Location = new System.Drawing.Point(866, 7);
             this.btnMax.Name = "btnMax";
             this.btnMax.Size = new System.Drawing.Size(20, 20);
@@ -232,7 +232,7 @@ namespace OPP
             // 
             this.btnResize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnResize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnResize.Image = global::OPP.Properties.Resources.icon_maximizar;
+            this.btnResize.Image = global::GUI.Properties.Resources.icon_maximizar;
             this.btnResize.Location = new System.Drawing.Point(866, 7);
             this.btnResize.Name = "btnResize";
             this.btnResize.Size = new System.Drawing.Size(20, 20);
@@ -245,7 +245,7 @@ namespace OPP
             // 
             this.btnMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMin.Image = global::OPP.Properties.Resources.icon_minimizar;
+            this.btnMin.Image = global::GUI.Properties.Resources.icon_minimizar;
             this.btnMin.Location = new System.Drawing.Point(840, 7);
             this.btnMin.Name = "btnMin";
             this.btnMin.Size = new System.Drawing.Size(20, 20);
@@ -259,7 +259,7 @@ namespace OPP
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.Image = global::OPP.Properties.Resources.icon_cerrar2;
+            this.btnClose.Image = global::GUI.Properties.Resources.icon_cerrar2;
             this.btnClose.Location = new System.Drawing.Point(892, 7);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(20, 20);
@@ -271,7 +271,7 @@ namespace OPP
             // btnMenu
             // 
             this.btnMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMenu.Image = global::OPP.Properties.Resources.Mobile_Menu_Icon;
+            this.btnMenu.Image = global::GUI.Properties.Resources.Mobile_Menu_Icon;
             this.btnMenu.Location = new System.Drawing.Point(6, 7);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(35, 35);

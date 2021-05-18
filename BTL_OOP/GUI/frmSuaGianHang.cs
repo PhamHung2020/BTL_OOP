@@ -4,7 +4,7 @@ using System.Windows.Forms;
 using DTO;
 using BUS;
 
-namespace OPP
+namespace GUI
 {
     public partial class frmSuaGianHang : Form
     {

@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using BUS;
 
-namespace OPP
+namespace GUI
 {
     public partial class frmLogin : Form
     {
@@ -65,8 +65,8 @@ namespace OPP
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            TaiKhoanBUS taiKhoanKhachHangBUS = TaiKhoanBUS.getInstance();
-            if(taiKhoanKhachHangBUS.Check(txtUserName.Text, txtPass.Text))
+            TaiKhoanBUS taiKhoanBUS = TaiKhoanBUS.Instance();
+            if(taiKhoanBUS.Check(txtUserName.Text, txtPass.Text))
             {
                 this.Hide();
                 Form1 form1 = new Form1();

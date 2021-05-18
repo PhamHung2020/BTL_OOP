@@ -1,33 +1,42 @@
-﻿// LE TON NANG - 20194339
+﻿// Đồng Duy Tiến - 20194381
 namespace DTO
 {
+    /// <summary>
+    /// Class mô tả 1 tài khoản sử dụng phần mềm
+    /// </summary>
     public class TaiKhoanDTO
     {
-        private string _email;
+        private string _username = "Unknown";
         /// <summary>
-        /// Phương thức get/set email
+        /// Username của tài khoản, không rỗng
         /// </summary>
-        public string Email
+        public string Username
         {
-            get => _email;
-            set { if (value != null) _email = value; }
+            get => _username;
+            set { if (!string.IsNullOrEmpty(value)) _username = value; }
         }
 
-        private string _passWord;
+
+        private string _passWord = "Unknown";
+        /// <summary>
+        /// Mật khẩu của tài khoản, không rỗng
+        /// </summary>
         public string PassWord
         {
             get => _passWord;
-            set { if (value != null) _passWord = value; }
+            set { if (!string.IsNullOrEmpty(value)) _passWord = value; }
         }
+
+
         /// <summary>
-        /// Phương thức khỏi tạo 2 tham số
+        /// Phương thức khởi tạo của class
         /// </summary>
-        /// <param name="_email"></param>
-        /// <param name="_passWord"></param>
-        public TaiKhoanDTO(string _email, string _passWord)
+        /// <param name="username">Username của tài khoản</param>
+        /// <param name="passWord">Mật khẩu của tài khoản</param>
+        public TaiKhoanDTO(string username, string passWord)
         {
-            this._email = _email;
-            this._passWord = _passWord;
+            Username = username;
+            PassWord = passWord;
         }
     }
 }

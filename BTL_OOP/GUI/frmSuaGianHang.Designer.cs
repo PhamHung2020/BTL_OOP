@@ -1,5 +1,5 @@
 ﻿
-namespace OPP
+namespace GUI
 {
     partial class frmSuaGianHang
     {

@@ -6,7 +6,7 @@ using System.Windows.Forms;
 using DTO;
 using BUS;
 
-namespace OPP
+namespace GUI
 {
     
     public partial class frmQuanLyGianHang : Form
@@ -68,7 +68,6 @@ namespace OPP
         /// <param name="e"></param>
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            Bunifu.UI.WinForms.BunifuDataGridView data;
             if(cbLoaiGianHang.SelectedIndex == 0)
             {
                 _suaGianHang();
@@ -79,19 +78,17 @@ namespace OPP
             }
             else
                 _suaGianHangTC();
-            
-            
-            
         }
+
         private void _suaGianHang()
         {
-            if(dataGianHang.SelectedRows[0].Cells[4].Value == "Đã thuê")
+            if(dataGianHang.SelectedRows[0].Cells[4].Value.ToString() == "Đã thuê")
             {
                 this.Alert("Gian hàng đã được thuê không được sửa", frmThongBao.alertTypeEnum.Warning);
             }
             else
             {
-                bool LoaiGianHang = dataGianHang.SelectedRows[0].Cells[3].Value == "Gian hàng tiêu chuẩn";
+                bool LoaiGianHang = dataGianHang.SelectedRows[0].Cells[3].Value.ToString() == "Gian hàng tiêu chuẩn";
                 if(LoaiGianHang == false)
                 {
                     GianHangCaoCapDTO gianHangCaoCap = qlGianHang.TimKiemTheoMaGianHang<GianHangCaoCapDTO>(dataGianHang.SelectedRows[0].Cells[0].Value.ToString())[0];
@@ -115,7 +112,7 @@ namespace OPP
         }
         private void _suaGianHangCC()
         {
-            if(dataGianHangCC.SelectedRows[0].Cells[3].Value == "Đã thuê")
+            if(dataGianHangCC.SelectedRows[0].Cells[3].Value.ToString() == "Đã thuê")
             {
                 this.Alert("Gian hàng đã được thuê không được sửa", frmThongBao.alertTypeEnum.Warning);
             }
@@ -131,7 +128,7 @@ namespace OPP
         }
         private void _suaGianHangTC()
         {
-            if(dataGianHangTC.SelectedRows[0].Cells[3].Value == "Đã thuê")
+            if(dataGianHangTC.SelectedRows[0].Cells[3].Value.ToString() == "Đã thuê")
             {
                 this.Alert("Gian hàng đã được thuê không được sửa", frmThongBao.alertTypeEnum.Warning);
             }
@@ -446,7 +443,7 @@ namespace OPP
 
         private void dataGianHang_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            bool LoaiGianHang = dataGianHang.Rows[e.RowIndex].Cells[3].Value == "Gian hàng tiêu chuẩn";
+            bool LoaiGianHang = dataGianHang.Rows[e.RowIndex].Cells[3].Value.ToString() == "Gian hàng tiêu chuẩn";
             if(LoaiGianHang == false)
             {
                 GianHangCaoCapDTO gianHangCaoCap = qlGianHang.TimKiemTheoMaGianHang<GianHangCaoCapDTO>(dataGianHang.SelectedRows[0].Cells[0].Value.ToString())[0];
@@ -471,7 +468,7 @@ namespace OPP
 
         private void dataGianHang_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            bool LoaiGianHang = dataGianHang.Rows[e.RowIndex].Cells[3].Value == "Gian hàng tiêu chuẩn";
+            bool LoaiGianHang = dataGianHang.Rows[e.RowIndex].Cells[3].Value.ToString() == "Gian hàng tiêu chuẩn";
             if(LoaiGianHang == false)
             {
                 GianHangCaoCapDTO gianHangCaoCap = qlGianHang.TimKiemTheoMaGianHang<GianHangCaoCapDTO>(dataGianHang.SelectedRows[0].Cells[0].Value.ToString())[0];

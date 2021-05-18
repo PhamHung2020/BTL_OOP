@@ -2,9 +2,9 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using OPP.Properties;
+using GUI.Properties;
 
-namespace OPP
+namespace GUI
 {
     public partial class frmThongBao : Form
     {

@@ -1,5 +1,5 @@
 ﻿
-namespace OPP
+namespace GUI
 {
     partial class frmThongBao
     {
@@ -69,7 +69,7 @@ namespace OPP
             // 
             // guna2PictureBox2
             // 
-            this.guna2PictureBox2.Image = global::OPP.Properties.Resources.Multiply_18px2;
+            this.guna2PictureBox2.Image = global::GUI.Properties.Resources.Multiply_18px2;
             this.guna2PictureBox2.Location = new System.Drawing.Point(393, 12);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
@@ -100,7 +100,7 @@ namespace OPP
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::OPP.Properties.Resources.Checkmark_28px;
+            this.pictureBox1.Image = global::GUI.Properties.Resources.Checkmark_28px;
             this.pictureBox1.Location = new System.Drawing.Point(12, 26);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(43, 36);

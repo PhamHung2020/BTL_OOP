@@ -1,5 +1,5 @@
 ﻿
-namespace OPP
+namespace GUI
 {
     partial class frmNguoiQuanLy
     {
@@ -51,7 +51,7 @@ namespace OPP
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::OPP.Properties.Resources.hashtag;
+            this.pictureBox1.Image = global::GUI.Properties.Resources.hashtag;
             this.pictureBox1.Location = new System.Drawing.Point(354, 89);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(201, 199);

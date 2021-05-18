@@ -3,8 +3,9 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using BUS;
 
-namespace OPP
+namespace GUI
 {
     public partial class Form1 : Form
     {
@@ -150,6 +151,7 @@ namespace OPP
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            KhuTrungBayBUS.Instance.KiemTraTinhTrangThue();
             addFrm(new frmNguoiQuanLy());
         }
 

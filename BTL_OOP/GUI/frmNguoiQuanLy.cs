@@ -2,7 +2,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace OPP
+namespace GUI
 {
     public partial class frmNguoiQuanLy : Form
     {

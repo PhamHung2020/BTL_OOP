@@ -1,5 +1,5 @@
 ﻿
-namespace OPP
+namespace GUI
 {
     partial class frmThongTinLienHe
     {
@@ -191,7 +191,7 @@ namespace OPP
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::OPP.Properties.Resources._174761185_760561574650089_311558246407658133_n__1_;
+            this.pictureBox1.Image = global::GUI.Properties.Resources._174761185_760561574650089_311558246407658133_n__1_;
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(299, 246);
@@ -202,7 +202,7 @@ namespace OPP
             // pictureBox2
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Image = global::OPP.Properties.Resources._128276132_751074828924633_6714379802517118051_n;
+            this.pictureBox2.Image = global::GUI.Properties.Resources._128276132_751074828924633_6714379802517118051_n;
             this.pictureBox2.Location = new System.Drawing.Point(308, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(299, 246);
@@ -213,7 +213,7 @@ namespace OPP
             // pictureBox3
             // 
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox3.Image = global::OPP.Properties.Resources._177930111_738095100219336_74805604007878888_n;
+            this.pictureBox3.Image = global::GUI.Properties.Resources._177930111_738095100219336_74805604007878888_n;
             this.pictureBox3.Location = new System.Drawing.Point(613, 3);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(301, 246);

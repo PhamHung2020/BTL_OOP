@@ -1,13 +1,17 @@
-﻿/*LE TON NANG - 20194339*/
+﻿// Lê Tôn Năng - 20194339
 using DAL;
 
 namespace BUS
 {
+    /// <summary>
+    /// Class xử lý trung gian các vấn đề liên quan đến tài khoản người dùng
+    /// </summary>
     public class TaiKhoanBUS
     {
+        // Singleton Pattern
         private static TaiKhoanBUS _instance;
-        private TaiKhoanBUS() { }
-        public static TaiKhoanBUS getInstance()
+
+        public static TaiKhoanBUS Instance()
         {
             if (_instance == null)
             {
@@ -15,24 +19,27 @@ namespace BUS
             }
             return _instance;
         }
+
+        private TaiKhoanBUS() { }
+
+
         /// <summary>
-        /// Phương thức check xem tài khoản có hợp lệ hay không
+        /// Kiểm tra xem username và password truyền vào có trùng với một tài khoản đã có nào hay không
         /// </summary>
-        /// <param name="email">Email nhập vào</param>
-        /// <param name="password">Password nhập vào</param>
-        /// <returns>True nếu tài khoản hợp lệ</returns>
-        public bool Check(string email, string password)
+        /// <param name="username">Username cần kiểm tra</param>
+        /// <param name="password">Password cần kiếm tra</param>
+        /// <returns>Nếu username và password hợp lệ, trả về true. Ngược lại, trả về false</returns>
+        public bool Check(string username, string password)
         {
-            bool check = false;
-            TaiKhoanDAL taiKhoanKhachHangDAL = new TaiKhoanDAL();
-            foreach (var i in taiKhoanKhachHangDAL.TaiKhoanKhachHangs)
+            TaiKhoanDAL taiKhoanDAL = new TaiKhoanDAL();
+            foreach (var taiKhoan in taiKhoanDAL.DsTaiKhoan)
             {
-                if (i.Email == email && i.PassWord == password)
+                if (taiKhoan.Username == username && taiKhoan.PassWord == password)
                 {
-                    check = true;
+                    return true;
                 }
             }
-            return check;
+            return false;
         }
     }
 }

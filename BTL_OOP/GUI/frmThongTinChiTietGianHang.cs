@@ -3,7 +3,7 @@ using System;
 using System.Windows.Forms;
 using DTO;
 
-namespace OPP
+namespace GUI
 {
     public partial class frmThongTinChiTietGianHang : Form
     {

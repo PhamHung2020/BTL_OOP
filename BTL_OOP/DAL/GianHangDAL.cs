@@ -1,12 +1,18 @@
-﻿using System.Collections.Generic;
+﻿// Phạm Mạnh Hùng - 20194293
+using System.Collections.Generic;
 using DTO;
 
 namespace DAL
 {
+    /// <summary>
+    /// Class khởi tạo và lưu trữ dữ liệu về gian hàng
+    /// </summary>
     public class GianHangDAL
     {
         private List<GianHangDTO> _dsGianHang;
-
+        /// <summary>
+        /// Danh sách toàn bộ các gian hàng trong khu trưng bày
+        /// </summary>
         public List<GianHangDTO> DsGianHang
         {
             get
@@ -19,6 +25,10 @@ namespace DAL
             }
         }
 
+
+        /// <summary>
+        /// Khởi tạo dữ liệu ban đầu cho chương trình, tránh việc khi chạy chương trình thì phải nhập lại dữ liệu từ đầu.
+        /// </summary>
         public void Load()
         {
             _dsGianHang = new List<GianHangDTO>()
@@ -37,16 +47,27 @@ namespace DAL
                 new GianHangCaoCapDTO("CC204", 17.2, "204", false, 5, 5),
                 new GianHangCaoCapDTO("CC301", 18.7, "301", false, 7, 8),
                 new GianHangCaoCapDTO("CC302", 19, "302", false, 8, 8),
-        };
+            };
         }
 
+
+        /// <summary>
+        /// Trả về danh sách gian hàng theo kiểu được truyền vào.
+        /// Nếu T là GianHangDTO, toàn bộ danh sách được trả về.
+        /// Nếu T là GianHangTieuChuanDTO, danh sách các gian hàng tiêu chuẩn được trả về.
+        /// Tương tự với GianHangCaoCapDTO
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns>Danh sách gian hàng loại T</returns>
         public List<T> LayDanhSachGianHang<T>() where T : GianHangDTO
         {
+            // Nếu T là GianHangDTO, trả về toàn bộ danh sách
             if (typeof(T) == typeof(GianHangDTO))
             {
                 return _dsGianHang as List<T>;
             }
 
+            // Lọc các gian hàng kiểu T trong _dsGianHang
             List<T> list = new List<T>();
             foreach (GianHangDTO gianHang in _dsGianHang)
             {

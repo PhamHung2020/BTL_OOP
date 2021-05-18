@@ -1,5 +1,5 @@
 ﻿
-namespace OPP
+namespace GUI
 {
     partial class frmLogin
     {
@@ -132,7 +132,7 @@ namespace OPP
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::OPP.Properties.Resources.hashtag;
+            this.pictureBox1.Image = global::GUI.Properties.Resources.hashtag;
             this.pictureBox1.Location = new System.Drawing.Point(95, 40);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(120, 120);
@@ -260,7 +260,7 @@ namespace OPP
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::OPP.Properties.Resources.empleados1;
+            this.pictureBox3.Image = global::GUI.Properties.Resources.empleados1;
             this.pictureBox3.Location = new System.Drawing.Point(15, 11);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(24, 24);
@@ -297,7 +297,7 @@ namespace OPP
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::OPP.Properties.Resources.boss_man_128;
+            this.pictureBox2.Image = global::GUI.Properties.Resources.boss_man_128;
             this.pictureBox2.Location = new System.Drawing.Point(15, 11);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(24, 24);
