@@ -114,6 +114,9 @@ namespace BUS
         /// </summary>
         /// <param name="gianHangCapNhat">Object chứa thông tin đã cập nhật của gian hàng cần sửa</param>
         /// <returns>Nếu cập nhật thành công, trả về true. Ngược lại, trả về false hoặc trả ra Exception có chứa thông báo lỗi cụ thể</returns>
+        /// <exception cref="System.Exception">
+        /// Gian hàng cần cập nhật không tồn tại hoặc đang được thuê
+        /// </exception>
         public bool CapNhatGianHang(GianHangDTO gianHangCapNhat)
         {
             // Kiểm tra xem gian hàng cần sửa có thực sự tồn tại trong hệ thống hoặc đang được thuê không

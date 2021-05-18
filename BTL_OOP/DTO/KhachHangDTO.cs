@@ -53,19 +53,19 @@ namespace DTO
         }
 
 
-        private DateTime _thoiGianBatDauThue = new DateTime(2010, 1, 1);
+        private DateTime _thoiGianBatDauThue = new DateTime(2020, 1, 1);
         /// <summary>
         /// Thời gian bắt đầu thuê, tính theo ngày (không tính theo giờ).
-        /// Mặc định và muộn nhất là 1/1/2010
+        /// Mặc định và sớm nhất là 1/1/2020
         /// </summary>
         public DateTime ThoiGianBatDauThue
         {
             get => _thoiGianBatDauThue;
-            set { if (value.Year >= 2010) _thoiGianBatDauThue = value; }
+            set { if (value.Year >= 2000) _thoiGianBatDauThue = value; }
         }
 
 
-        private DateTime _thoiGianKetThucThue = new DateTime(2010, 1, 1);
+        private DateTime _thoiGianKetThucThue = new DateTime(2020, 1, 1);
         /// <summary>
         /// Thời gian kết thúc thuê, tính theo ngày (không tính theo giờ).
         /// Mặc định và muộn nhất là trùng với thời gian bắt đầu thuê
@@ -73,7 +73,7 @@ namespace DTO
         public DateTime ThoiGianKetThucThue
         {
             get => _thoiGianKetThucThue;
-            set { if (value.Year >= 2010 && value > _thoiGianBatDauThue) _thoiGianKetThucThue = value; }
+            set { if (value.Year >= 2020 && value > _thoiGianBatDauThue) _thoiGianKetThucThue = value; }
         }
 
 

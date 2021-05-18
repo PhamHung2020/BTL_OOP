@@ -18,7 +18,7 @@ namespace GUI
             Bunifu.Dataviz.WinForms.BunifuDatavizBasic.DataPoint dataPoint = new Bunifu.Dataviz.WinForms.BunifuDatavizBasic.DataPoint(Bunifu.Dataviz.WinForms.BunifuDatavizBasic._type.Bunifu_splineArea);
             for(int i = 1; i <= 12; i++)
             {
-                decimal doanhThu = KhuTrungBayBUS.Instance.DoanhThu(i, 2021);
+                decimal doanhThu = KhuTrungBayBUS.Instance.DoanhThu(i);
                 dataPoint.addxy(i, doanhThu);
             }    
             canvas.addData(dataPoint);

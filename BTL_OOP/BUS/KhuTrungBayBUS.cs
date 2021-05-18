@@ -92,7 +92,8 @@ namespace BUS
 
 
         /// <summary>
-        /// Tính doanh thu của khu trưng bày trong 1 tháng của 1 năm nhất định
+        /// Tính doanh thu của khu trưng bày trong 1 tháng của 1 năm nhất định.
+        /// Nếu năm = 0 hoặc không truyền vào, thì lấy năm hiện tại
         /// </summary>
         /// <param name="thang">Tháng cần tính doanh thu</param>
         /// <param name="year">Năm cần tính doanh thu. Nếu năm = 0, lấy năm hiện tại</param>
