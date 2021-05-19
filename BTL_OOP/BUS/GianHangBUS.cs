@@ -38,7 +38,6 @@ namespace BUS
         private GianHangBUS()
         {
             _context = new GianHangDAL();
-            _context.Load();
         }
 
 

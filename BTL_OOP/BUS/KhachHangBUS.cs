@@ -38,7 +38,6 @@ namespace BUS
         private KhachHangBUS()
         {
             _context = new KhachHangDAL();
-            _context.Load();
         }
 
 

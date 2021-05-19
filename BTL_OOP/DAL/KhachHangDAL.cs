@@ -20,7 +20,7 @@ namespace DAL
             {
                 if (_dsKhachHang == null)
                 {
-                    Load();
+                    _Load();
                 }
                 return _dsKhachHang;
             }
@@ -30,7 +30,7 @@ namespace DAL
         /// <summary>
         /// Khởi tạo dữ liệu ban đầu cho chương trình, tránh việc khi chạy chương trình thì phải nhập lại dữ liệu từ đầu
         /// </summary>
-        public void Load()
+        private void _Load()
         {
             _dsKhachHang = new List<KhachHangDTO>()
             {

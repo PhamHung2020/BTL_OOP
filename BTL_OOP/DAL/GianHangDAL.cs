@@ -19,7 +19,7 @@ namespace DAL
             {
                 if (_dsGianHang == null)
                 {
-                    Load();
+                    _Load();
                 }
                 return _dsGianHang;
             }
@@ -29,7 +29,7 @@ namespace DAL
         /// <summary>
         /// Khởi tạo dữ liệu ban đầu cho chương trình, tránh việc khi chạy chương trình thì phải nhập lại dữ liệu từ đầu.
         /// </summary>
-        public void Load()
+        private void _Load()
         {
             _dsGianHang = new List<GianHangDTO>()
             {
@@ -64,12 +64,12 @@ namespace DAL
             // Nếu T là GianHangDTO, trả về toàn bộ danh sách
             if (typeof(T) == typeof(GianHangDTO))
             {
-                return _dsGianHang as List<T>;
+                return DsGianHang as List<T>;
             }
 
-            // Lọc các gian hàng kiểu T trong _dsGianHang
+            // Lọc các gian hàng kiểu T trong DsGianHang
             List<T> list = new List<T>();
-            foreach (GianHangDTO gianHang in _dsGianHang)
+            foreach (GianHangDTO gianHang in DsGianHang)
             {
                 if (gianHang is T)
                 {
