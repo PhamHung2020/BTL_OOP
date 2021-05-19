@@ -468,6 +468,8 @@ namespace GUI
 
         private void dataGianHang_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
         {
+            if(e.RowIndex == -1)
+                return;
             bool LoaiGianHang = dataGianHang.Rows[e.RowIndex].Cells[3].Value.ToString() == "Gian hàng tiêu chuẩn";
             if(LoaiGianHang == false)
             {
