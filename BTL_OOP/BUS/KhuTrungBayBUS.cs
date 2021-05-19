@@ -68,23 +68,41 @@ namespace BUS
                 // Tính thời gian thuê của một khách hàng nếu thời điểm thuê của khách hàng đó
                 // nằm trong khoảng thời gian nhập vào
                 var time = new TimeSpan(-1, 0, 0, 0);
+
+                // thoi gian khach hang bat dau thue = KHBD
+                // thoi gian khach hang ket thuc thue = KHKT
+                // thoi gian bat dau nhap vao = TGBD
+                // thoi gian ket thuc nhap vao = TGKT
+
+                // TH1: TGBD <= KHBD <= KHKT <= TGKT
                 if (thoiGianBatDau.Date <= khachHang.ThoiGianBatDauThue.Date &&
                     khachHang.ThoiGianKetThucThue.Date <= thoiGianKetThuc.Date)
                 {
                     time = khachHang.ThoiGianKetThucThue - khachHang.ThoiGianBatDauThue;
                 }
-                else if (khachHang.ThoiGianBatDauThue.Date < thoiGianBatDau.Date &&
-                         khachHang.ThoiGianKetThucThue.Date < thoiGianKetThuc.Date &&
+                // TH2: KHBD <= TGBD <= KHKT <= TGKT
+                else if (khachHang.ThoiGianBatDauThue.Date <= thoiGianBatDau.Date &&
+                         khachHang.ThoiGianKetThucThue.Date <= thoiGianKetThuc.Date &&
                          thoiGianBatDau.Date <= khachHang.ThoiGianKetThucThue.Date)
                 {
                     time = khachHang.ThoiGianKetThucThue - thoiGianBatDau;
                 }
-                else if (thoiGianBatDau.Date < khachHang.ThoiGianBatDauThue.Date &&
-                         thoiGianKetThuc.Date < khachHang.ThoiGianKetThucThue.Date &&
+                // TH3: TGBD <= KHBD <= TGKT <= KHKT
+                else if (thoiGianBatDau.Date <= khachHang.ThoiGianBatDauThue.Date &&
+                         thoiGianKetThuc.Date <= khachHang.ThoiGianKetThucThue.Date &&
                          khachHang.ThoiGianBatDauThue.Date <= thoiGianKetThuc.Date)
                 {
                     time = thoiGianKetThuc - khachHang.ThoiGianBatDauThue;
                 }
+                // TH4: KHBD <= THBD <= TGKT <= KHKT
+                else if (khachHang.ThoiGianBatDauThue.Date <= thoiGianBatDau.Date &&
+                         thoiGianKetThuc <= khachHang.ThoiGianKetThucThue.Date)
+                {
+                    time = thoiGianKetThuc - thoiGianBatDau;
+                }
+
+                // Chuyển thời gian thuê time sang số ngày + 1 (đầu - cuối + 1 = số lượng)
+                // Và tìm gian hàng đang được thuê và gọi phương thức TinhChiPhi để tính chi phí thuê
                 doanhThu += GianHangBUS.Instance.TimKiemTheoMaGianHang(khachHang.MaGianHang)[0].TinhChiPhi((int)time.TotalDays + 1);
             }
             return doanhThu;
