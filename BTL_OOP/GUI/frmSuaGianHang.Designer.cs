@@ -49,9 +49,9 @@ namespace GUI
             this.lbChatLieuMaiChe = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtChatLieuVachNgan = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtChatLieuMaiChe = new Guna.UI2.WinForms.Guna2TextBox();
-            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -414,13 +414,6 @@ namespace GUI
             this.txtChatLieuMaiChe.Size = new System.Drawing.Size(342, 36);
             this.txtChatLieuMaiChe.TabIndex = 1;
             // 
-            // bunifuDragControl1
-            // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this;
-            this.bunifuDragControl1.Vertical = true;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
@@ -439,6 +432,11 @@ namespace GUI
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(637, 15);
             this.panel2.TabIndex = 38;
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.ContainerControl = this;
+            this.guna2DragControl1.TargetControl = this.panel1;
             // 
             // frmSuaGianHang
             // 
@@ -498,8 +496,8 @@ namespace GUI
         private Guna.UI2.WinForms.Guna2HtmlLabel lbChatLieuMaiChe;
         private Guna.UI2.WinForms.Guna2TextBox txtChatLieuVachNgan;
         private Guna.UI2.WinForms.Guna2TextBox txtChatLieuMaiChe;
-        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }

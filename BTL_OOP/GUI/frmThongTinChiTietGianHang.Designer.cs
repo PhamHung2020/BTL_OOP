@@ -50,9 +50,9 @@ namespace GUI
             this.txtSoQuatLamMat = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbSoQuatLamMat = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -218,6 +218,7 @@ namespace GUI
             this.txtDienTich.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDienTich.HoverState.Parent = this.txtDienTich;
             this.txtDienTich.Location = new System.Drawing.Point(242, 54);
+            this.txtDienTich.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDienTich.Name = "txtDienTich";
             this.txtDienTich.PasswordChar = '\0';
             this.txtDienTich.PlaceholderText = "";
@@ -254,6 +255,7 @@ namespace GUI
             this.txtChatLieuVachNgan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtChatLieuVachNgan.HoverState.Parent = this.txtChatLieuVachNgan;
             this.txtChatLieuVachNgan.Location = new System.Drawing.Point(242, 224);
+            this.txtChatLieuVachNgan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtChatLieuVachNgan.Name = "txtChatLieuVachNgan";
             this.txtChatLieuVachNgan.PasswordChar = '\0';
             this.txtChatLieuVachNgan.PlaceholderText = "";
@@ -279,6 +281,7 @@ namespace GUI
             this.txtChatLieuMaiChe.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtChatLieuMaiChe.HoverState.Parent = this.txtChatLieuMaiChe;
             this.txtChatLieuMaiChe.Location = new System.Drawing.Point(242, 182);
+            this.txtChatLieuMaiChe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtChatLieuMaiChe.Name = "txtChatLieuMaiChe";
             this.txtChatLieuMaiChe.PasswordChar = '\0';
             this.txtChatLieuMaiChe.PlaceholderText = "";
@@ -326,6 +329,7 @@ namespace GUI
             this.txtSoBanGhe.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSoBanGhe.HoverState.Parent = this.txtSoBanGhe;
             this.txtSoBanGhe.Location = new System.Drawing.Point(242, 224);
+            this.txtSoBanGhe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSoBanGhe.Name = "txtSoBanGhe";
             this.txtSoBanGhe.PasswordChar = '\0';
             this.txtSoBanGhe.PlaceholderText = "";
@@ -362,6 +366,7 @@ namespace GUI
             this.txtSoQuatLamMat.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSoQuatLamMat.HoverState.Parent = this.txtSoQuatLamMat;
             this.txtSoQuatLamMat.Location = new System.Drawing.Point(242, 182);
+            this.txtSoQuatLamMat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSoQuatLamMat.Name = "txtSoQuatLamMat";
             this.txtSoQuatLamMat.PasswordChar = '\0';
             this.txtSoQuatLamMat.PlaceholderText = "";
@@ -472,13 +477,6 @@ namespace GUI
             this.bunifuButton1.UseDefaultRadiusAndThickness = true;
             this.bunifuButton1.Click += new System.EventHandler(this.bunifuButton1_Click);
             // 
-            // bunifuDragControl1
-            // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this;
-            this.bunifuDragControl1.Vertical = true;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
@@ -497,6 +495,11 @@ namespace GUI
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(627, 11);
             this.panel2.TabIndex = 47;
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.ContainerControl = this;
+            this.guna2DragControl1.TargetControl = this.panel1;
             // 
             // frmThongTinChiTietGianHang
             // 
@@ -553,8 +556,8 @@ namespace GUI
         private Guna.UI2.WinForms.Guna2TextBox txtSoQuatLamMat;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbSoQuatLamMat;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
-        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }

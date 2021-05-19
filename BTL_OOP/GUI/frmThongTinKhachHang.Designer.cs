@@ -29,6 +29,7 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.tbTenKhachHang = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -46,6 +47,7 @@ namespace GUI
             this.btnThem = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,6 +78,7 @@ namespace GUI
             this.tbTenKhachHang.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbTenKhachHang.HoverState.Parent = this.tbTenKhachHang;
             this.tbTenKhachHang.Location = new System.Drawing.Point(295, 58);
+            this.tbTenKhachHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbTenKhachHang.Name = "tbTenKhachHang";
             this.tbTenKhachHang.PasswordChar = '\0';
             this.tbTenKhachHang.PlaceholderText = "";
@@ -111,6 +114,7 @@ namespace GUI
             this.tbDiaChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbDiaChi.HoverState.Parent = this.tbDiaChi;
             this.tbDiaChi.Location = new System.Drawing.Point(295, 101);
+            this.tbDiaChi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbDiaChi.Name = "tbDiaChi";
             this.tbDiaChi.PasswordChar = '\0';
             this.tbDiaChi.PlaceholderText = "";
@@ -157,6 +161,7 @@ namespace GUI
             this.tbMaGianHang.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbMaGianHang.HoverState.Parent = this.tbMaGianHang;
             this.tbMaGianHang.Location = new System.Drawing.Point(295, 143);
+            this.tbMaGianHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbMaGianHang.Name = "tbMaGianHang";
             this.tbMaGianHang.PasswordChar = '\0';
             this.tbMaGianHang.PlaceholderText = "";
@@ -241,6 +246,7 @@ namespace GUI
             this.tbTienDatCoc.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbTienDatCoc.HoverState.Parent = this.tbTienDatCoc;
             this.tbTienDatCoc.Location = new System.Drawing.Point(295, 263);
+            this.tbTienDatCoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbTienDatCoc.Name = "tbTienDatCoc";
             this.tbTienDatCoc.PasswordChar = '\0';
             this.tbTienDatCoc.PlaceholderText = "";
@@ -311,6 +317,11 @@ namespace GUI
             this.panel2.Size = new System.Drawing.Size(707, 19);
             this.panel2.TabIndex = 19;
             // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.ContainerControl = this;
+            this.guna2DragControl1.TargetControl = this.panel1;
+            // 
             // frmThongTinKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -364,5 +375,6 @@ namespace GUI
         private Guna.UI2.WinForms.Guna2Button btnThem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }
