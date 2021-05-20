@@ -27,3 +27,9 @@ C:\Users\ACER\Desktop\BTL_OOP5\BTL_OOP\DTO\obj\Debug\DTO.csprojAssemblyReference
 C:\Users\ACER\Desktop\BTL_OOP5\BTL_OOP\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Users\ACER\Desktop\BTL_OOP5\BTL_OOP\DTO\obj\Debug\DTO.dll
 C:\Users\ACER\Desktop\BTL_OOP5\BTL_OOP\DTO\obj\Debug\DTO.pdb
+E:\git\BTL_OOP\BTL_OOP\DTO\bin\Debug\DTO.dll
+E:\git\BTL_OOP\BTL_OOP\DTO\bin\Debug\DTO.pdb
+E:\git\BTL_OOP\BTL_OOP\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+E:\git\BTL_OOP\BTL_OOP\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+E:\git\BTL_OOP\BTL_OOP\DTO\obj\Debug\DTO.dll
+E:\git\BTL_OOP\BTL_OOP\DTO\obj\Debug\DTO.pdb

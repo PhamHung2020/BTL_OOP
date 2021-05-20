@@ -53,3 +53,14 @@ C:\Users\ACER\Desktop\BTL_OOP5\BTL_OOP\BUS\obj\Debug\BUS.csproj.CoreCompileInput
 C:\Users\ACER\Desktop\BTL_OOP5\BTL_OOP\BUS\obj\Debug\BUS.csproj.CopyComplete
 C:\Users\ACER\Desktop\BTL_OOP5\BTL_OOP\BUS\obj\Debug\BUS.dll
 C:\Users\ACER\Desktop\BTL_OOP5\BTL_OOP\BUS\obj\Debug\BUS.pdb
+E:\git\BTL_OOP\BTL_OOP\BUS\bin\Debug\BUS.dll
+E:\git\BTL_OOP\BTL_OOP\BUS\bin\Debug\BUS.pdb
+E:\git\BTL_OOP\BTL_OOP\BUS\bin\Debug\DAL.dll
+E:\git\BTL_OOP\BTL_OOP\BUS\bin\Debug\DTO.dll
+E:\git\BTL_OOP\BTL_OOP\BUS\bin\Debug\DAL.pdb
+E:\git\BTL_OOP\BTL_OOP\BUS\bin\Debug\DTO.pdb
+E:\git\BTL_OOP\BTL_OOP\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+E:\git\BTL_OOP\BTL_OOP\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+E:\git\BTL_OOP\BTL_OOP\BUS\obj\Debug\BUS.csproj.CopyComplete
+E:\git\BTL_OOP\BTL_OOP\BUS\obj\Debug\BUS.dll
+E:\git\BTL_OOP\BTL_OOP\BUS\obj\Debug\BUS.pdb

@@ -43,3 +43,12 @@ C:\Users\ACER\Desktop\BTL_OOP5\BTL_OOP\DAL\obj\Debug\DAL.csproj.CoreCompileInput
 C:\Users\ACER\Desktop\BTL_OOP5\BTL_OOP\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\ACER\Desktop\BTL_OOP5\BTL_OOP\DAL\obj\Debug\DAL.dll
 C:\Users\ACER\Desktop\BTL_OOP5\BTL_OOP\DAL\obj\Debug\DAL.pdb
+E:\git\BTL_OOP\BTL_OOP\DAL\bin\Debug\DAL.dll
+E:\git\BTL_OOP\BTL_OOP\DAL\bin\Debug\DAL.pdb
+E:\git\BTL_OOP\BTL_OOP\DAL\bin\Debug\DTO.dll
+E:\git\BTL_OOP\BTL_OOP\DAL\bin\Debug\DTO.pdb
+E:\git\BTL_OOP\BTL_OOP\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+E:\git\BTL_OOP\BTL_OOP\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\git\BTL_OOP\BTL_OOP\DAL\obj\Debug\DAL.csproj.CopyComplete
+E:\git\BTL_OOP\BTL_OOP\DAL\obj\Debug\DAL.dll
+E:\git\BTL_OOP\BTL_OOP\DAL\obj\Debug\DAL.pdb

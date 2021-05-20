@@ -41,9 +41,6 @@ namespace GUI
             dataGianHang.Rows.Clear();
             dataGianHangTC.Rows.Clear();
             dataGianHangCC.Rows.Clear();
-            dataGianHang.Rows.Add(gianHangCaoCaps.Count + gianHangTieuChuans.Count - 1);
-            dataGianHangCC.Rows.Add(gianHangCaoCaps.Count - 1);
-            dataGianHangTC.Rows.Add(gianHangTieuChuans.Count - 1);
             _AddListGianHangCaoCap(gianHangCaoCaps, 0);
             _AddListGianHangTieuChuan(gianHangTieuChuans, gianHangCaoCaps.Count);
             _AddTableGianHangCC(gianHangCaoCaps);
@@ -148,23 +145,26 @@ namespace GUI
         }
         private void _AddGianHangTieuChuan(GianHangTieuChuanDTO gianHang, int count)
         {
-            dataGianHang.Rows[count].Cells[0].Value = gianHang.MaGianHang;
-            dataGianHang.Rows[count].Cells[1].Value = gianHang.DienTich;
-            dataGianHang.Rows[count].Cells[2].Value = gianHang.ViTriGianHang;
-            dataGianHang.Rows[count].Cells[3].Value = "Gian hàng tiêu chuẩn";
-            dataGianHang.Rows[count].Cells[4].Value = TinhTrangThue(gianHang);
-            
+            DataGridViewRow row = (DataGridViewRow)dataGianHang.Rows[0].Clone();
+            row.Cells[0].Value = gianHang.MaGianHang;
+            row.Cells[1].Value = gianHang.DienTich;
+            row.Cells[2].Value = gianHang.ViTriGianHang;
+            row.Cells[3].Value = "Gian hàng tiêu chuẩn";
+            row.Cells[4].Value = TinhTrangThue(gianHang);
+            dataGianHang.Rows.Add(row);
 
         }
         private void _AddGianHangCaoCap(GianHangCaoCapDTO gianHang, int count)
         {
-            
-            dataGianHang.Rows[count].Cells[0].Value = gianHang.MaGianHang;
-            dataGianHang.Rows[count].Cells[1].Value = gianHang.DienTich;
-            dataGianHang.Rows[count].Cells[2].Value = gianHang.ViTriGianHang;
-            dataGianHang.Rows[count].Cells[3].Value = "Gian hàng cao cấp";
-            dataGianHang.Rows[count].Cells[4].Value = TinhTrangThue(gianHang);
-            
+
+            DataGridViewRow row = (DataGridViewRow)dataGianHang.Rows[0].Clone();
+            row.Cells[0].Value = gianHang.MaGianHang;
+            row.Cells[1].Value = gianHang.DienTich;
+            row.Cells[2].Value = gianHang.ViTriGianHang;
+            row.Cells[3].Value = "Gian hàng cao cấp";
+            row.Cells[4].Value = TinhTrangThue(gianHang);
+            dataGianHang.Rows.Add(row);
+
         }
         private string TinhTrangThue(GianHangDTO gianHang)
         {
@@ -344,12 +344,14 @@ namespace GUI
             
             for(int i = 0; i < gianHangTieuChuans.Count; i++)
             {
-                dataGianHangTC.Rows[i].Cells[0].Value = gianHangTieuChuans[i].MaGianHang;
-                dataGianHangTC.Rows[i].Cells[1].Value = gianHangTieuChuans[i].DienTich;
-                dataGianHangTC.Rows[i].Cells[2].Value = gianHangTieuChuans[i].ViTriGianHang;
-                dataGianHangTC.Rows[i].Cells[3].Value = TinhTrangThue(gianHangTieuChuans[i]);
-                dataGianHangTC.Rows[i].Cells[4].Value = gianHangTieuChuans[i].ChatLieuVachNgan;
-                dataGianHangTC.Rows[i].Cells[5].Value = gianHangTieuChuans[i].ChatLieuMaiChe;
+                DataGridViewRow row = (DataGridViewRow)dataGianHangTC.Rows[0].Clone();
+                row.Cells[0].Value = gianHangTieuChuans[i].MaGianHang;
+                row.Cells[1].Value = gianHangTieuChuans[i].DienTich;
+                row.Cells[2].Value = gianHangTieuChuans[i].ViTriGianHang;
+                row.Cells[3].Value = TinhTrangThue(gianHangTieuChuans[i]);
+                row.Cells[4].Value = gianHangTieuChuans[i].ChatLieuVachNgan;
+                row.Cells[5].Value = gianHangTieuChuans[i].ChatLieuMaiChe;
+                dataGianHangTC.Rows.Add(row);
             }    
         }
         private void _AddTableGianHangCC(List<GianHangCaoCapDTO> gianHangCaoCaps)
@@ -357,12 +359,14 @@ namespace GUI
            
             for(int i = 0; i < gianHangCaoCaps.Count; i++)
             {
-                dataGianHangCC.Rows[i].Cells[0].Value = gianHangCaoCaps[i].MaGianHang;
-                dataGianHangCC.Rows[i].Cells[1].Value = gianHangCaoCaps[i].DienTich;
-                dataGianHangCC.Rows[i].Cells[2].Value = gianHangCaoCaps[i].ViTriGianHang;
-                dataGianHangCC.Rows[i].Cells[3].Value = TinhTrangThue(gianHangCaoCaps[i]);
-                dataGianHangCC.Rows[i].Cells[4].Value = gianHangCaoCaps[i].SoQuatLamMat;
-                dataGianHangCC.Rows[i].Cells[5].Value = gianHangCaoCaps[i].SoBanGhe;
+                DataGridViewRow row = (DataGridViewRow)dataGianHangCC.Rows[0].Clone();
+                row.Cells[0].Value = gianHangCaoCaps[i].MaGianHang;
+                row.Cells[1].Value = gianHangCaoCaps[i].DienTich;
+                row.Cells[2].Value = gianHangCaoCaps[i].ViTriGianHang;
+                row.Cells[3].Value = TinhTrangThue(gianHangCaoCaps[i]);
+                row.Cells[4].Value = gianHangCaoCaps[i].SoQuatLamMat;
+                row.Cells[5].Value = gianHangCaoCaps[i].SoBanGhe;
+                dataGianHangCC.Rows.Add(row);
             }
         }
         private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
