@@ -32,6 +32,7 @@ namespace BUS
         public bool Check(string username, string password)
         {
             TaiKhoanDAL taiKhoanDAL = new TaiKhoanDAL();
+            // Tìm kiếm trong danh sách tài khoản, có tài khoản nào trùng với username và password truyền vào hay không
             foreach (var taiKhoan in taiKhoanDAL.DsTaiKhoan)
             {
                 if (taiKhoan.Username == username && taiKhoan.PassWord == password)

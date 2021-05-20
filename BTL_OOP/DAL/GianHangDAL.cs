@@ -61,16 +61,19 @@ namespace DAL
         /// <returns>Danh sách gian hàng loại T</returns>
         public List<T> LayDanhSachGianHang<T>() where T : GianHangDTO
         {
+            // Dùng toán tử typeof để kiểm tra kiểu dữ liệu
             // Nếu T là GianHangDTO, trả về toàn bộ danh sách
             if (typeof(T) == typeof(GianHangDTO))
             {
                 return DsGianHang as List<T>;
             }
 
-            // Lọc các gian hàng kiểu T trong DsGianHang
+            // Danh sách sẽ được trả về
             List<T> list = new List<T>();
+            // Duyệt qua các gian hàng trong danh sách gian hàng
             foreach (GianHangDTO gianHang in DsGianHang)
             {
+                // Lọc các gian hàng kiểu T trong DsGianHang
                 if (gianHang is T)
                 {
                     list.Add(gianHang as T);

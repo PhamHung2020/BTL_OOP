@@ -17,7 +17,9 @@ namespace BUS
         /// <returns>Mã gian hàng được sinh</returns>
         public static string GenerateMaGianHang<T>(string viTriGianHang) where T : GianHangDTO
         {
+            // Lấy kiểu dữ liệu của T và lưu vào biến kiểu Type
             Type type = typeof(T);
+            // So sánh kiểu để sinh ra mã gian hàng phù hợp
             if (type == typeof(GianHangTieuChuanDTO))
             {
                 return "TC" + viTriGianHang;
@@ -37,6 +39,9 @@ namespace BUS
         /// <returns>Mã khách hàng</returns>
         public static string GenerateMaKhachHang(string maGianHang, DateTime thoiDiemBatDau)
         {
+            // mã khách hàng là mã gian hàng + thời gian bắt đầu thuê (tính đến ngày, không tính đến giờ)
+            // do mỗi gian hàng sẽ chỉ được thuê bởi duy nhất 1 khách hàng tại 1 thời điểm
+            // nên mã khách hàng sẽ là duy nhất
             return maGianHang + thoiDiemBatDau.Year + thoiDiemBatDau.Month + thoiDiemBatDau.Day;
         }
     }

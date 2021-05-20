@@ -51,6 +51,9 @@ namespace BUS
         public List<GianHangDTO> TimKiemTheoMaGianHang(string maGianHang)
         {
             // Sử dụng LinQ để truy vấn
+            // Duyệt qua các gian hàng trong danh sách gian hàng
+            // và tìm các gian hàng có chứa xâu truyền vào trong mã của gian hàng đó
+            // và trả về dưới dạng danh sách List<GianHangDTO>
             return _context.DsGianHang.Where(gianHang => gianHang.MaGianHang.Contains(maGianHang)).ToList();
         }
 
@@ -64,9 +67,10 @@ namespace BUS
         public List<T> TimKiemTheoMaGianHang<T>(string maGianHang) where T : GianHangDTO
         {
             List<T> list = new List<T>();
-            // Lọc các gian hàng loại T có chứa maGianHang trong mã gian hàng
+            // Duyệt qua các gian hàng trong danh sách gian hàng
             foreach (GianHangDTO gianHang in _context.DsGianHang)
             {
+                // Lọc lấy các gian hàng loại T và có chứa xâu maGianHang trong mã gian hàng
                 if (gianHang is T && gianHang.MaGianHang.Contains(maGianHang))
                     list.Add(gianHang as T);
             }
@@ -81,7 +85,7 @@ namespace BUS
         /// <returns>Danh sách các gian hàng loại T</returns>
         public List<T> LayDanhSachGianHang<T>() where T : GianHangDTO
         {
-            // Gọi phương thức của DAL
+            // Gọi phương thức của DAL trả về danh sách toàn bộ các gian hàng
             return _context.LayDanhSachGianHang<T>();
         }
 
@@ -102,7 +106,7 @@ namespace BUS
                     throw new Exception($"Gian hàng mới có vị trí trùng\nvới gian hàng có mã {gianHang.MaGianHang}");
                 }
             }
-
+            // Thêm gian hàng mới vào danh sách
             _context.DsGianHang.Add(gianHangMoi);
             return true;
         }
@@ -129,6 +133,7 @@ namespace BUS
                 throw new Exception("Gian hàng đang được thuê. Cập nhật không thành công");
             }
 
+            // Cập nhật gian hàng trong danh sách
             int index = _context.DsGianHang.IndexOf(gianHang);
             _context.DsGianHang[index] = gianHangCapNhat;
             return true;
@@ -152,6 +157,7 @@ namespace BUS
             {
                 throw new Exception("Gian hàng đang được thuê.\nXóa không thành công");
             }
+            // Xóa gian hàng trong danh sách
             _context.DsGianHang.Remove(gianHang);
             return true;
         }
@@ -188,6 +194,9 @@ namespace BUS
         public List<GianHangDTO> DanhSachGianHangTheoTinhTrangThue(bool tinhTrangThue)
         {
             // Sử dụng LinQ để truy vấn
+            // Duyệt qua các gian hàng trong danh sách gian hàng
+            // và lọc lấy các gian hàng có tinh trạng thuê phù hợp
+            // rồi trả về dưới dạng danh sách
             return _context.DsGianHang.Where(gianHang => gianHang.TinhTrangThue == tinhTrangThue).ToList();
         }
 
@@ -209,6 +218,7 @@ namespace BUS
             {
                 throw new Exception("Gian hàng này hiện tại đang được thuê bởi 1 khách hàng khác. Thay đổi không thành công");
             }
+            // Thay đổi tình trạng thuê của gian hàng
             gianHang.TinhTrangThue = tinhTrangThue;
         }
     }

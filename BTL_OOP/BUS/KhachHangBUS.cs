@@ -49,6 +49,8 @@ namespace BUS
         public List<KhachHangDTO> TimKiemTheoMaGianHang(string maGianHang)
         {
             // Sử dụng LinQ để truy vấn
+            // Duyệt qua các khách hàng trong danh sách gian hàng
+            // và lọc lấy các khách hàng có thuê gian hàng có mã được truyền vào
             return _context.DsKhachHang.Where(khachHang => khachHang.MaGianHang == maGianHang).ToList();
         }
 
@@ -103,15 +105,23 @@ namespace BUS
             // bởi khách hàng khác tại cùng thời điểm hay không
             foreach (var khachHang in _context.DsKhachHang)
             {
+                // Thời gian khách hàng mới bắt đầu thuê = MBD
+                // Thời gian khách hàng mới kết thúc thuê = MKT
+                // Thời gian khách hàng trong danh sách bắt đầu thuê = BD
+                // Thời gian khách hàng trong danh sách kết thúc thuê = KT
+
                 if (khachHangMoi.MaGianHang == khachHang.MaGianHang &&
+                    // TH1: MBD <= BD <= KT <= MKT
                    ((khachHangMoi.ThoiGianBatDauThue.Date <= khachHang.ThoiGianBatDauThue.Date &&
                     khachHangMoi.ThoiGianKetThucThue.Date >= khachHang.ThoiGianKetThucThue.Date) ||
+                    // TH2: BD <= MBD <= KT
                    (khachHangMoi.ThoiGianBatDauThue.Date >= khachHang.ThoiGianBatDauThue.Date &&
                     khachHangMoi.ThoiGianBatDauThue.Date <= khachHang.ThoiGianKetThucThue.Date) ||
+                    // TH3: BD <= MKT <= KT
                    (khachHangMoi.ThoiGianKetThucThue.Date >= khachHang.ThoiGianBatDauThue.Date &&
                     khachHangMoi.ThoiGianKetThucThue.Date <= khachHang.ThoiGianKetThucThue.Date)))
                 {
-                    throw new Exception($"Gian hàng {khachHangMoi.MaGianHang} đang được thuê");
+                    throw new Exception($"Gian hàng {khachHangMoi.MaGianHang} đã được thuê tại thời điểm nhập vào");
                 }
             }
             _context.DsKhachHang.Add(khachHangMoi);
