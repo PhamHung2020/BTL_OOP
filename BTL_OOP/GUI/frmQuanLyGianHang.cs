@@ -41,11 +41,10 @@ namespace GUI
             dataGianHang.Rows.Clear();
             dataGianHangTC.Rows.Clear();
             dataGianHangCC.Rows.Clear();
-            _AddListGianHangCaoCap(gianHangCaoCaps, 0);
-            _AddListGianHangTieuChuan(gianHangTieuChuans, gianHangCaoCaps.Count);
+            _AddListGianHangCaoCap(gianHangCaoCaps);
+            _AddListGianHangTieuChuan(gianHangTieuChuans);
             _AddTableGianHangCC(gianHangCaoCaps);
             _AddTableGianHangTC(gianHangTieuChuans);
-            count = gianHangCaoCaps.Count + gianHangTieuChuans.Count;
             _ChangeColorTableCC();
             _ChangeColorTableTC();
             _ChangeColor();
@@ -79,6 +78,11 @@ namespace GUI
 
         private void _suaGianHang()
         {
+            if(dataGianHang.SelectedRows[0].Cells[4].Value == null)
+            {
+                this.Alert("Bạn chưa chọn gian hàng", frmThongBao.alertTypeEnum.Error);
+                return;
+            }    
             if(dataGianHang.SelectedRows[0].Cells[4].Value.ToString() == "Đã thuê")
             {
                 this.Alert("Gian hàng đã được thuê không được sửa", frmThongBao.alertTypeEnum.Warning);
@@ -109,6 +113,11 @@ namespace GUI
         }
         private void _suaGianHangCC()
         {
+            if(dataGianHangCC.SelectedRows[0].Cells[3].Value == null)
+            {
+                this.Alert("Bạn chưa chọn gian hàng", frmThongBao.alertTypeEnum.Error);
+                return;
+            }    
             if(dataGianHangCC.SelectedRows[0].Cells[3].Value.ToString() == "Đã thuê")
             {
                 this.Alert("Gian hàng đã được thuê không được sửa", frmThongBao.alertTypeEnum.Warning);
@@ -125,6 +134,11 @@ namespace GUI
         }
         private void _suaGianHangTC()
         {
+            if(dataGianHangTC.SelectedRows[0].Cells[3].Value == null)
+            {
+                this.Alert("Bạn chưa chọn gian hàng", frmThongBao.alertTypeEnum.Error);
+                return;
+            }    
             if(dataGianHangTC.SelectedRows[0].Cells[3].Value.ToString() == "Đã thuê")
             {
                 this.Alert("Gian hàng đã được thuê không được sửa", frmThongBao.alertTypeEnum.Warning);
@@ -143,7 +157,7 @@ namespace GUI
         {
 
         }
-        private void _AddGianHangTieuChuan(GianHangTieuChuanDTO gianHang, int count)
+        private void _AddGianHangTieuChuan(GianHangTieuChuanDTO gianHang)
         {
             DataGridViewRow row = (DataGridViewRow)dataGianHang.Rows[0].Clone();
             row.Cells[0].Value = gianHang.MaGianHang;
@@ -154,7 +168,7 @@ namespace GUI
             dataGianHang.Rows.Add(row);
 
         }
-        private void _AddGianHangCaoCap(GianHangCaoCapDTO gianHang, int count)
+        private void _AddGianHangCaoCap(GianHangCaoCapDTO gianHang)
         {
 
             DataGridViewRow row = (DataGridViewRow)dataGianHang.Rows[0].Clone();
@@ -177,11 +191,11 @@ namespace GUI
             }    
         }
         
-        private void _AddListGianHangCaoCap(List<GianHangCaoCapDTO> gianHangCaos, int start)
+        private void _AddListGianHangCaoCap(List<GianHangCaoCapDTO> gianHangCaos)
         {
-            for(int i = start; i < gianHangCaoCaps.Count + start; i++)
+            for(int i = 0; i < gianHangCaoCaps.Count; i++)
             {
-                _AddGianHangCaoCap(gianHangCaoCaps[i - start], i);
+                _AddGianHangCaoCap(gianHangCaoCaps[i]);
             }
         }
         /// <summary>
@@ -189,11 +203,11 @@ namespace GUI
         /// </summary>
         /// <param name="gianTieuChuans">List danh sách gian hàng tiêu chuẩn</param>
         /// <param name="start">Vị trí bắt đầu thêm</param>
-        private void _AddListGianHangTieuChuan(List<GianHangTieuChuanDTO> gianTieuChuans, int start)
+        private void _AddListGianHangTieuChuan(List<GianHangTieuChuanDTO> gianTieuChuans)
         {
-            for(int i = start; i < gianTieuChuans.Count + start; i++)
+            for(int i = 0; i < gianTieuChuans.Count; i++)
             {
-                _AddGianHangTieuChuan(gianTieuChuans[i - start], i);
+                _AddGianHangTieuChuan(gianTieuChuans[i]);
             }
         }
         /// <summary>
@@ -287,12 +301,12 @@ namespace GUI
                                     string ma = gianHangs[i].MaGianHang;
                                     List<GianHangTieuChuanDTO> gianHangs1 = qlGianHang.TimKiemTheoMaGianHang<GianHangTieuChuanDTO>(ma);
                                     GianHangTieuChuanDTO gianHang = qlGianHang.TimKiemTheoMaGianHang<GianHangTieuChuanDTO>(ma)[0];
-                                    _AddGianHangTieuChuan(gianHang, i);
+                                    _AddGianHangTieuChuan(gianHang);
                                 } else if(gianHangs[i].MaGianHang.Substring(0,2) == "CC")
                                 {
                                     string ma = gianHangs[i].MaGianHang;
                                     GianHangCaoCapDTO gianHang = qlGianHang.TimKiemTheoMaGianHang<GianHangCaoCapDTO>(ma)[0];
-                                    _AddGianHangCaoCap(gianHang, i);
+                                    _AddGianHangCaoCap(gianHang);
                                 }
                                 _ChangeColor();
                             }    
@@ -319,13 +333,13 @@ namespace GUI
                                     string ma = gianHangs[i].MaGianHang;
                                     List<GianHangTieuChuanDTO> gianHangs1 = qlGianHang.TimKiemTheoMaGianHang<GianHangTieuChuanDTO>(ma);
                                     GianHangTieuChuanDTO gianHang = qlGianHang.TimKiemTheoMaGianHang<GianHangTieuChuanDTO>(ma)[0];
-                                    _AddGianHangTieuChuan(gianHang, i);
+                                    _AddGianHangTieuChuan(gianHang);
                                 }
                                 else if(gianHangs[i].MaGianHang.Substring(0, 2) == "CC")
                                 {
                                     string ma = gianHangs[i].MaGianHang;
                                     GianHangCaoCapDTO gianHang = qlGianHang.TimKiemTheoMaGianHang<GianHangCaoCapDTO>(ma)[0];
-                                    _AddGianHangCaoCap(gianHang, i);
+                                    _AddGianHangCaoCap(gianHang);
                                 }
                                 _ChangeColor();
                             }
@@ -404,11 +418,42 @@ namespace GUI
             {
                 string maGianHang;
                 if(cbLoaiGianHang.SelectedIndex == 0)
-                    maGianHang = dataGianHang.SelectedRows[0].Cells[0].Value.ToString();
+                {
+                    if(dataGianHang.SelectedRows[0].Cells[0].Value == null)
+                    {
+                        this.Alert("Bạn chưa chọn gian hàng", frmThongBao.alertTypeEnum.Error);
+                        return;
+                    }
+                    else
+                    {
+                        maGianHang = dataGianHang.SelectedRows[0].Cells[0].Value.ToString();
+                    }
+                }
                 else if(cbLoaiGianHang.SelectedIndex == 1)
-                    maGianHang = dataGianHangCC.SelectedRows[0].Cells[0].Value.ToString();
+                {
+                    if(dataGianHangCC.SelectedRows[0].Cells[0].Value == null)
+                    {
+                        this.Alert("Bạn chưa chọn gian hàng", frmThongBao.alertTypeEnum.Error);
+                        return;
+                    }
+                    else
+                    {
+                        maGianHang = dataGianHangCC.SelectedRows[0].Cells[0].Value.ToString();
+                    }
+                }
                 else
-                    maGianHang = dataGianHangTC.SelectedRows[0].Cells[0].Value.ToString();
+                {
+                    if(dataGianHangTC.SelectedRows[0].Cells[0].Value == null)
+                    {
+                        this.Alert("Bạn chưa chọn gian hàng", frmThongBao.alertTypeEnum.Error);
+                        return;
+                    }
+                    else
+                    {
+                        maGianHang = dataGianHangTC.SelectedRows[0].Cells[0].Value.ToString();
+                    }
+                }
+
                 GianHangDTO gianHang = qlGianHang.TimKiemTheoMaGianHang<GianHangDTO>(maGianHang)[0];
                 if(gianHang.TinhTrangThue == true)
                 {
@@ -473,6 +518,8 @@ namespace GUI
         private void dataGianHang_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if(e.RowIndex == -1)
+                return;
+            if(dataGianHang.Rows[e.RowIndex].Cells[3].Value == null)
                 return;
             bool LoaiGianHang = dataGianHang.Rows[e.RowIndex].Cells[3].Value.ToString() == "Gian hàng tiêu chuẩn";
             if(LoaiGianHang == false)
