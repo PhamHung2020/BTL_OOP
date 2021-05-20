@@ -285,14 +285,7 @@ namespace GUI
                         } else
                         {
                             dataGianHang.Rows.Clear();
-                            if(gianHangs.Count == 1)
-                            {
-                                
-                            }
-                            else
-                            {
-                                dataGianHang.Rows.Add(gianHangs.Count - 1);
-                            }
+                    
                             
                             for(int i = 0; i < gianHangs.Count; i++)
                             {
@@ -322,10 +315,6 @@ namespace GUI
                         else
                         {
                             dataGianHang.Rows.Clear();
-                            if(gianHangs.Count == 1)
-                                dataGianHang.Rows.Add(1);
-                            else
-                                dataGianHang.Rows.Add(gianHangs.Count - 1);
                             for(int i = 0; i < gianHangs.Count; i++)
                             {
                                 if(gianHangs[i].MaGianHang.Substring(0, 2) == "TC")
